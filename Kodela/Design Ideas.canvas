@@ -1,0 +1,8 @@
+{
+	"nodes":[
+		{"id":"195fd3e7c37da736","type":"file","file":"Kodela Design2.png","x":100,"y":-280,"width":400,"height":400},
+		{"id":"80d4db4d754a9071","type":"file","file":"Kodela Design1.png","x":-340,"y":-40,"width":400,"height":320},
+		{"id":"740c0161c3f6ef0f","type":"file","file":"Kodela Design.jpeg","x":-560,"y":-360,"width":189,"height":399}
+	],
+	"edges":[]
+}
