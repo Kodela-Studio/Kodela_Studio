@@ -1,6 +1,8 @@
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Footer from "./components/Footer";
+import Services from "./components/Services";
+import Projects from "./components/Projects";
 
 function App() {
   return (
@@ -8,6 +10,8 @@ function App() {
       <Header />
       <Hero />
       <Footer />
+      <Services />
+      <Projects />
     </div>
   );
 }
