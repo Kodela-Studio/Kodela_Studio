@@ -5,17 +5,17 @@ import JaninaProfile from "../assets/Janina-profile.jpg";
 const teamMembers = [
   {
     name: "Anna",
-    role: "Design & digital tilstedeværelse",
+    role: "Utvikler og Garfisk Design",
     image: AnnaProfile,
   },
   {
     name: "Helena",
-    role: "Frontend & brukeropplevelse",
+    role: "Utvikler og UX Design",
     image: HelenaProfile,
   },
   {
     name: "Janina",
-    role: "Strategi & prosjektflyt",
+    role: "Utvikler og Sikekrhet",
     image: JaninaProfile,
   },
 ];
