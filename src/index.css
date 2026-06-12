@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+@theme {
+  --color-kodela-black: #111111;
+  --color-kodela-dark: #1b1b1b;
+  --color-kodela-soft: #2b2b2b;
+  --color-kodela-cream: #f5f5f5;
+  --color-kodela-gold: #c9a66b;
+  --color-kodela-muted: #b8b3aa;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #111111;
+  color: #f5f5f5;
+  font-family: Arial, Helvetica, sans-serif;
+}
