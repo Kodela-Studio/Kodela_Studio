@@ -4,15 +4,26 @@ import Services from "./components/Services";
 import About from "./components/About";
 import Projects from "./components/Projects";
 import Footer from "./components/Footer";
+import Packages from "./components/Packages";
 
 function App() {
+  const isPackagesPage = window.location.pathname === "/packages";
+
   return (
     <div className="min-h-screen bg-kodela-black text-kodela-cream">
       <Header />
-      <Hero />
-      <Services />
-      <About />
-      <Projects />
+
+      {isPackagesPage ? (
+        <Packages />
+      ) : (
+        <>
+          <Hero />
+          <Services />
+          <About />
+          <Projects />
+        </>
+      )}
+
       <Footer />
     </div>
   );
