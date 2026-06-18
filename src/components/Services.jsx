@@ -27,7 +27,10 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="bg-kodela-cream px-6 py-28 text-kodela-black">
+    <section
+      id="services"
+      className="bg-kodela-cream px-6 py-28 text-kodela-black"
+    >
       <div className="mx-auto max-w-7xl">
         <div className="mb-16 max-w-3xl">
           <p className="mb-4 text-sm uppercase tracking-[0.3rem] text-kodela-gold">
@@ -39,8 +42,8 @@ export default function Services() {
           </h2>
 
           <p className="mt-6 max-w-2xl text-zinc-600">
-            Vi kombinerer design, teknologi og strategi for å lage løsninger
-            som ikke bare ser bra ut, men som faktisk fungerer.
+            Vi kombinerer design, teknologi og strategi for å lage løsninger som
+            ikke bare ser bra ut, men som faktisk fungerer.
           </p>
         </div>
 
@@ -61,8 +64,8 @@ export default function Services() {
               </p>
 
               <a
-                href="#contact"
-                className="mt-8 inline-block text-xs uppercase tracking-widest text-kodela-black transition group-hover:text-kodela-gold"
+                href="/packages"
+                className="mt-8 inline-block text-xs uppercase tracking-widest text-kodela-black transition group-hover:translate-x-1 group-hover:text-kodela-gold"
               >
                 Les mer →
               </a>
