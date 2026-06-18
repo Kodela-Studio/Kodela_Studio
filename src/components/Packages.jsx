@@ -418,8 +418,8 @@ export default function Packages() {
           </h2>
 
           <p className="mx-auto mt-6 max-w-2xl leading-8 text-zinc-600">
-            Send oss noen linjer om bedriften, målet deres og hva dere ønsker å
-            få til. Vi anbefaler riktig nivå før dere bestemmer dere.
+            fortell oss litt om bedriften, målet deres og hva dere ønsker å få
+            til. Vi anbefaler riktig nivå før dere bestemmer dere.
           </p>
 
           <a

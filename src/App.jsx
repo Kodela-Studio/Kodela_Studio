@@ -5,6 +5,7 @@ import About from "./components/About";
 import Projects from "./components/Projects";
 import Footer from "./components/Footer";
 import Packages from "./components/Packages";
+import Chatbot from "./components/Chatbot";
 
 function App() {
   const isPackagesPage = window.location.pathname === "/packages";
@@ -25,6 +26,7 @@ function App() {
       )}
 
       <Footer />
+      <Chatbot />
     </div>
   );
 }
