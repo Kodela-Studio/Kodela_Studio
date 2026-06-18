@@ -1,174 +1,145 @@
 const packages = [
   {
-    id: "essential",
-    label: "For en trygg start",
-    name: "Essential",
-    price: "19 900 kr",
-    timeline: "2–3 uker",
-    bestFor:
-      "Små bedrifter, gründere og lokale aktører som trenger en profesjonell nettside raskt.",
+    name: "Start",
+    price: "Fra 9 900 kr",
+    label: "Lav terskel",
+    bestFor: "Enkeltpersonforetak, små lokale bedrifter og nye prosjekter.",
     result:
-      "Du får en tydelig, moderne og mobiltilpasset nettside som bygger tillit og gjør det enkelt for kunder å ta kontakt.",
+      "En enkel, pen og mobiltilpasset nettside som gir et profesjonelt førsteinntrykk.",
     includes: [
-      "Oppstartsmøte og behovsavklaring",
-      "Målgruppe og enkel strukturplan",
-      "Skreddersydd nettsidedesign",
-      "Opptil 5 sider",
+      "1–3 sider",
+      "Responsivt design",
       "Kontaktskjema",
-      "Mobiltilpasset løsning",
-      "Grunnleggende SEO",
-      "Google Analytics / Search Console",
+      "Google Maps",
+      "SEO-grunnlag",
       "1 revisjonsrunde",
-      "1 time opplæring",
     ],
   },
   {
-    id: "growth",
-    label: "Mest valgt",
-    name: "Growth",
-    price: "39 900 kr",
-    timeline: "4–6 uker",
-    bestFor:
-      "Bedrifter som ønsker flere henvendelser, tydeligere merkevare og en nettside som jobber mer aktivt.",
+    name: "Essential",
+    price: "Fra 14 900 kr",
+    label: "Trygg start",
+    bestFor: "Små bedrifter som trenger en mer komplett nettside.",
     result:
-      "Du får en mer komplett digital tilstedeværelse med bedre struktur, sterkere merkevare og tydeligere vei fra besøk til kontakt.",
+      "En profesjonell nettside med tydelig struktur, godt uttrykk og enkel kontaktvei.",
     includes: [
-      "Alt i Essential",
-      "Brand board med farger og typografi",
-      "Opptil 10 sider",
-      "Konverteringsoptimalisert UX",
-      "Tydelige call-to-actions",
-      "Blogg eller nyhetsseksjon",
-      "SEO-struktur for flere sider",
-      "Google Business-optimalisering",
-      "Hastighetsoptimalisering",
+      "Opptil 5 sider",
+      "Skreddersydd design",
+      "Mobiloptimalisering",
+      "Kontaktskjema",
+      "Google Analytics",
+      "Search Console",
       "2 revisjonsrunder",
-      "2 timer opplæring",
     ],
   },
   {
-    id: "premium",
-    label: "For høyere ambisjoner",
-    name: "Premium",
-    price: "69 900 kr",
-    timeline: "6–8 uker",
-    bestFor:
-      "Etablerte bedrifter som trenger en mer avansert, premium og strategisk digital løsning.",
+    name: "Growth",
+    price: "Fra 24 900 kr",
+    label: "Mest valgt",
+    bestFor: "Bedrifter som vil forbedre nettsiden og få flere henvendelser.",
     result:
-      "Du får en skreddersydd nettside med sterkere brukerreise, mer avansert funksjonalitet og et uttrykk som løfter merkevaren.",
+      "En mer strategisk nettside med bedre UX, sterkere merkevare og tydeligere vei til kontakt.",
+    includes: [
+      "Opptil 10 sider",
+      "UX-forbedringer",
+      "Brand board",
+      "SEO-struktur",
+      "Blogg/nyheter",
+      "Google Business-optimalisering",
+      "3 revisjonsrunder",
+    ],
+  },
+  {
+    name: "Premium",
+    price: "Fra 39 900 kr",
+    label: "For større behov",
+    bestFor:
+      "Etablerte bedrifter som trenger mer innhold, bedre flyt og funksjoner.",
+    result:
+      "En gjennomarbeidet nettside med sterkere brukeropplevelse, spesialseksjoner og enkel booking.",
     includes: [
       "Alt i Growth",
-      "Full UX-prosess",
-      "Brukerreise og wireframes",
-      "Skreddersydd UI-design",
-      "Avanserte animasjoner",
-      "Booking eller reservasjon",
-      "Integrasjoner mot kalender, CRM eller tredjepart",
-      "Avanserte skjemaer",
-      "Teknisk SEO",
-      "Core Web Vitals og performance",
-      "3 revisjonsrunder",
-      "Prioritert support under lansering",
-    ],
-  },
-  {
-    id: "digital-partner",
-    label: "Skreddersydd",
-    name: "Digital Partner",
-    price: "Fra 99 000 kr",
-    timeline: "Fra 8 uker",
-    bestFor:
-      "Selskaper som trenger mer enn en nettside: portal, system, automatisering eller langsiktig digital partner.",
-    result:
-      "Du får en digital løsning bygget rundt bedriftens prosesser, mål og videre vekst. Dette er for deg som ønsker en ekstern digital avdeling.",
-    includes: [
-      "Skreddersydd digital strategi",
-      "Nettside eller webapplikasjon",
-      "Kundeportal eller medlemsportal",
-      "Dashboard og datavisning",
-      "AI-chatbot eller FAQ-assistent",
-      "Automatiseringer",
-      "CRM / ERP-integrasjoner",
-      "Løpende optimalisering",
-      "Dedikert prosjektansvarlig",
-      "Roadmap for videre utvikling",
+      "Wireframes",
+      "Mer avansert UX/UI",
+      "Enkel bookingløsning",
+      "Spesialtilpassede seksjoner",
+      "Animasjoner",
+      "Ytelsesoptimalisering",
     ],
   },
 ];
 
-const subscriptions = [
-  {
-    name: "Care",
-    price: "499 kr/mnd",
-    text: "For deg som vil sikre at nettsiden holdes oppdatert og trygg etter lansering.",
-    items: ["Backup", "Oppdateringer", "Overvåking", "Månedlig statuskontroll"],
-  },
-  {
-    name: "Growth Care",
-    price: "999 kr/mnd",
-    text: "For deg som vil ha litt mer hjelp i hverdagen og slippe å tenke på småjusteringer selv.",
-    items: [
-      "Alt i Care",
-      "Prioritert support",
-      "Innholdsoppdateringer",
-      "Enkel SEO-sjekk",
-    ],
-  },
-  {
-    name: "Business Growth",
-    price: "1 990 kr/mnd",
-    text: "For bedrifter som ønsker jevnlig innsikt, synlighet og forbedringer over tid.",
-    items: [
-      "Alt i Growth Care",
-      "Månedlig rapport",
-      "Google Business-optimalisering",
-      "Konverteringsanbefalinger",
-    ],
-  },
-  {
-    name: "Digital Partner Care",
-    price: "4 990 kr/mnd",
-    text: "For bedrifter som ønsker oss tett på som strategisk og teknisk digital partner.",
-    items: [
-      "Alt i Business Growth",
-      "Månedlig strategimøte",
-      "Løpende forbedringer",
-      "Prioritert utviklingstid",
-    ],
-  },
+const addons = [
+  ["Ekstra underside", "Fra 1 500 kr"],
+  ["Logo enkel", "Fra 3 900 kr"],
+  ["Brand board", "Fra 4 900 kr"],
+  ["Full visuell identitet", "Fra 9 900 kr"],
+  ["Google Business-profil", "Fra 2 500 kr"],
+  ["SEO-grunnpakke", "Fra 3 900 kr"],
+  ["Enkel booking", "Fra 5 900 kr"],
+  ["FAQ-seksjon", "Fra 1 500 kr"],
+  ["Avansert kontaktskjema", "Fra 2 500 kr"],
+  ["Tekstforbedring", "Fra 1 900 kr"],
+  ["Blogginnlegg", "Fra 1 500 kr"],
+  ["Bildeoptimalisering", "Fra 1 500 kr"],
+];
+
+const carePlans = [
+  [
+    "Care",
+    "499 kr/mnd",
+    "Backup, oppdateringer, overvåking og månedlig sjekk.",
+  ],
+  [
+    "Growth Care",
+    "999 kr/mnd",
+    "Små innholdsoppdateringer, SEO-sjekk og prioritert support.",
+  ],
+  [
+    "Business Care",
+    "1 990 kr/mnd",
+    "Månedlig rapport, forbedringsforslag og Google Business-oppfølging.",
+  ],
+  [
+    "Digital Partner",
+    "Fra 2 990 kr/mnd",
+    "Fast samarbeid med design, innhold, videreutvikling og rådgivning.",
+  ],
 ];
 
 export default function Packages() {
   return (
     <main className="bg-kodela-black pt-32 text-kodela-cream">
-      <section className="px-6 py-24 md:py-32">
-        <div className="mx-auto grid max-w-7xl gap-16 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
+      <section className="relative overflow-hidden px-6 py-24 md:py-36">
+        <div className="absolute left-1/2 top-0 h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-kodela-gold/10 blur-3xl" />
+
+        <div className="relative mx-auto grid max-w-7xl gap-16 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
           <div>
             <p className="mb-6 text-sm uppercase tracking-[0.45rem] text-kodela-gold">
               Tjenester og pakker
             </p>
 
             <h1 className="max-w-5xl text-5xl font-light leading-[1.05] md:text-7xl">
-              Digitale løsninger som gjør bedriften enklere å velge.
+              Nettsider og digitale uttrykk som gjør bedriften enklere å velge.
             </h1>
 
             <p className="mt-8 max-w-2xl text-lg leading-8 text-kodela-muted">
-              Her finner du en tydelig oversikt over hvordan Kodela Studio kan
-              hjelpe deg med nettside, merkevare, digitale løsninger, drift og
-              videre vekst.
+              Vi hjelper små og mellomstore bedrifter med nettsider, design,
+              merkevare, struktur og videre drift. Her finner du tydelige
+              pakker, realistiske priser og fleksible tillegg.
             </p>
           </div>
 
-          <div className="border border-white/10 bg-kodela-dark p-8">
+          <div className="border border-white/10 bg-white/[0.03] p-8 backdrop-blur">
             <p className="text-sm uppercase tracking-[0.3rem] text-kodela-gold">
-              Kort fortalt
+              Kodela-metoden
             </p>
             <h2 className="mt-5 text-3xl font-light">
-              Vi bygger ikke bare nettsider. Vi bygger digitale salgsflater.
+              Start smart. Bygg videre når behovet vokser.
             </h2>
             <p className="mt-5 leading-7 text-kodela-muted">
-              Målet er at kunden raskt skal forstå hvem dere er, hvorfor dere er
-              relevante og hvordan de kan ta neste steg.
+              Vi holder pakkene tydelige, men fleksible. Du velger et nivå, så
+              legger vi kun til det som faktisk gir verdi.
             </p>
           </div>
         </div>
@@ -180,194 +151,160 @@ export default function Packages() {
             <p className="mb-4 text-sm uppercase tracking-[0.35rem] text-kodela-gold">
               Våre pakker
             </p>
-
             <h2 className="text-4xl font-light leading-tight md:text-6xl">
-              Velg nivået som passer ambisjonene deres.
+              Velg pakken som passer akkurat nå.
             </h2>
-
             <p className="mt-6 max-w-2xl leading-8 text-zinc-600">
-              Alle pakkene er bygget for å gi en profesjonell og trygg prosess.
               Prisene er startpriser eks. mva. Endelig tilbud avhenger av
-              innhold, funksjoner og teknisk omfang.
+              innhold, antall sider, funksjoner og hvor mye materiale som må
+              produseres.
             </p>
           </div>
 
           <div className="grid gap-6 lg:grid-cols-4">
-            {packages.map((pack) => (
+            {packages.map((pack) => {
+              const isFeatured = pack.name === "Growth";
+
+              return (
+                <article
+                  key={pack.name}
+                  className={`group relative flex min-h-[660px] flex-col overflow-hidden border p-8 transition duration-300 hover:-translate-y-2 ${
+                    isFeatured
+                      ? "border-kodela-gold bg-kodela-black text-kodela-cream shadow-2xl"
+                      : "border-zinc-200 bg-[#fbfaf7] hover:bg-white hover:shadow-2xl"
+                  }`}
+                >
+                  <div className="absolute right-0 top-0 h-28 w-28 translate-x-10 -translate-y-10 rounded-full bg-kodela-gold/20 blur-2xl" />
+
+                  <div className="relative">
+                    <div className="mb-8 flex items-center justify-between gap-4">
+                      <p className="text-xs uppercase tracking-[0.3rem] text-kodela-gold">
+                        {pack.label}
+                      </p>
+                      {isFeatured && (
+                        <span className="border border-kodela-gold px-3 py-1 text-[0.6rem] uppercase tracking-[0.2rem] text-kodela-gold">
+                          Anbefalt
+                        </span>
+                      )}
+                    </div>
+
+                    <h3 className="text-3xl font-light">{pack.name}</h3>
+                    <p className="mt-5 text-4xl font-light text-kodela-gold">
+                      {pack.price}
+                    </p>
+
+                    <p
+                      className={`mt-6 text-sm leading-7 ${
+                        isFeatured ? "text-kodela-muted" : "text-zinc-600"
+                      }`}
+                    >
+                      {pack.bestFor}
+                    </p>
+
+                    <div
+                      className={`my-8 h-px ${
+                        isFeatured ? "bg-white/10" : "bg-zinc-200"
+                      }`}
+                    />
+
+                    <ul
+                      className={`space-y-4 text-sm ${
+                        isFeatured ? "text-kodela-muted" : "text-zinc-700"
+                      }`}
+                    >
+                      {pack.includes.map((item) => (
+                        <li key={item} className="flex gap-3 leading-6">
+                          <span className="text-kodela-gold">✓</span>
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <a
+                    href="#contact"
+                    className={`relative mt-auto inline-block border px-6 py-4 text-center text-xs uppercase tracking-widest transition ${
+                      isFeatured
+                        ? "border-kodela-gold text-kodela-cream hover:bg-kodela-gold hover:text-kodela-black"
+                        : "border-kodela-gold text-kodela-black hover:bg-kodela-gold"
+                    }`}
+                  >
+                    Be om tilbud
+                  </a>
+                </article>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      <section className="px-6 py-28">
+        <div className="mx-auto max-w-7xl">
+          <div className="mb-16 max-w-4xl">
+            <p className="mb-4 text-sm uppercase tracking-[0.35rem] text-kodela-gold">
+              Detaljer
+            </p>
+            <h2 className="text-4xl font-light leading-tight md:text-6xl">
+              Hva betyr pakkene i praksis?
+            </h2>
+          </div>
+
+          <div className="grid gap-6">
+            {packages.map((pack, index) => (
               <article
                 key={pack.name}
-                className={`flex min-h-[620px] flex-col border p-8 transition hover:-translate-y-2 hover:shadow-2xl ${
-                  pack.name === "Growth"
-                    ? "border-kodela-gold bg-white shadow-xl"
-                    : pack.name === "Digital Partner"
-                      ? "border-kodela-black bg-kodela-black text-kodela-cream"
-                      : "border-zinc-200 bg-white"
-                }`}
+                className="grid gap-8 overflow-hidden border border-white/10 bg-white/[0.03] p-8 backdrop-blur md:grid-cols-[0.7fr_1.3fr]"
               >
-                <p className="mb-5 text-xs uppercase tracking-[0.3rem] text-kodela-gold">
-                  {pack.label}
-                </p>
+                <div>
+                  <p className="text-xs uppercase tracking-[0.3rem] text-kodela-gold">
+                    0{index + 1} / {pack.label}
+                  </p>
+                  <h3 className="mt-4 text-4xl font-light">{pack.name}</h3>
+                  <p className="mt-4 text-2xl text-kodela-gold">{pack.price}</p>
+                </div>
 
-                <h3 className="text-3xl font-medium">{pack.name}</h3>
-
-                <p className="mt-6 text-4xl font-light">{pack.price}</p>
-
-                <p
-                  className={`mt-6 text-sm leading-7 ${
-                    pack.name === "Digital Partner"
-                      ? "text-zinc-300"
-                      : "text-zinc-600"
-                  }`}
-                >
-                  {pack.bestFor}
-                </p>
-
-                <div className="my-8 h-px bg-current opacity-10" />
-
-                <ul className="space-y-4 text-sm">
-                  {pack.includes.slice(0, 6).map((item) => (
-                    <li key={item} className="flex gap-3 leading-6">
-                      <span className="text-kodela-gold">✓</span>
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                <a
-                  href={`#${pack.id}`}
-                  className={`mt-auto inline-block border px-6 py-4 text-center text-xs uppercase tracking-widest transition ${
-                    pack.name === "Digital Partner"
-                      ? "border-kodela-gold text-kodela-cream hover:bg-kodela-gold hover:text-kodela-black"
-                      : "border-kodela-gold text-kodela-black hover:bg-kodela-gold"
-                  }`}
-                >
-                  Se detaljer
-                </a>
+                <div className="grid gap-8 md:grid-cols-2">
+                  <div>
+                    <h4 className="mb-3 text-xl font-medium">Passer for</h4>
+                    <p className="leading-7 text-kodela-muted">
+                      {pack.bestFor}
+                    </p>
+                  </div>
+                  <div>
+                    <h4 className="mb-3 text-xl font-medium">Resultat</h4>
+                    <p className="leading-7 text-kodela-muted">{pack.result}</p>
+                  </div>
+                </div>
               </article>
             ))}
           </div>
         </div>
       </section>
 
-      {packages.map((pack, index) => (
-        <section
-          key={pack.id}
-          id={pack.id}
-          className={`px-6 py-28 ${
-            index % 2 === 0
-              ? "bg-kodela-black text-kodela-cream"
-              : "bg-kodela-dark text-kodela-cream"
-          }`}
-        >
-          <div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-[0.8fr_1.2fr]">
-            <div className="lg:sticky lg:top-32 lg:self-start">
-              <p className="mb-4 text-sm uppercase tracking-[0.35rem] text-kodela-gold">
-                {pack.label}
-              </p>
-
-              <h2 className="text-5xl font-light md:text-6xl">{pack.name}</h2>
-
-              <p className="mt-6 text-4xl text-kodela-gold">{pack.price}</p>
-
-              <p className="mt-4 text-sm uppercase tracking-[0.25rem] text-kodela-muted">
-                Leveringstid: {pack.timeline}
-              </p>
-
-              <p className="mt-8 max-w-md text-lg leading-8 text-kodela-muted">
-                {pack.result}
-              </p>
-            </div>
-
-            <div className="grid gap-6 md:grid-cols-2">
-              <div className="border border-white/10 bg-white/[0.03] p-8">
-                <h3 className="mb-5 text-2xl font-medium">
-                  Hvem passer pakken for?
-                </h3>
-                <p className="leading-8 text-kodela-muted">{pack.bestFor}</p>
-              </div>
-
-              <div className="border border-white/10 bg-white/[0.03] p-8">
-                <h3 className="mb-5 text-2xl font-medium">
-                  Hva blir resultatet?
-                </h3>
-                <p className="leading-8 text-kodela-muted">{pack.result}</p>
-              </div>
-
-              <div className="border border-white/10 bg-white/[0.03] p-8 md:col-span-2">
-                <h3 className="mb-8 text-2xl font-medium">
-                  Dette er inkludert
-                </h3>
-
-                <div className="grid gap-5 md:grid-cols-2">
-                  {pack.includes.map((item) => (
-                    <div
-                      key={item}
-                      className="flex gap-4 border border-white/10 bg-kodela-black/40 p-5"
-                    >
-                      <span className="text-kodela-gold">✓</span>
-                      <span className="text-sm leading-6 text-kodela-muted">
-                        {item}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div className="border border-kodela-gold/40 bg-kodela-gold/10 p-8 md:col-span-2">
-                <h3 className="mb-4 text-2xl font-medium">
-                  Når bør du velge {pack.name}?
-                </h3>
-                <p className="leading-8 text-kodela-muted">
-                  Velg denne pakken hvis du ønsker en løsning som matcher
-                  ambisjonsnivået deres nå, men som også kan bygges videre på
-                  senere med drift, SEO, innhold, booking eller mer avansert
-                  funksjonalitet.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-      ))}
-
       <section className="bg-kodela-cream px-6 py-28 text-kodela-black">
         <div className="mx-auto max-w-7xl">
           <div className="mb-16 max-w-4xl">
             <p className="mb-4 text-sm uppercase tracking-[0.35rem] text-kodela-gold">
-              Etter lansering
+              Tilleggstjenester
             </p>
-
             <h2 className="text-4xl font-light leading-tight md:text-6xl">
-              Drift, vedlikehold og videre vekst.
+              Små tillegg som gjør løsningen mer komplett.
             </h2>
-
             <p className="mt-6 max-w-2xl leading-8 text-zinc-600">
-              En nettside er ikke ferdig den dagen den lanseres. Den bør holdes
-              oppdatert, trygg og relevant. Derfor tilbyr vi abonnementer som
-              gir forutsigbar oppfølging.
+              Perfekt når du ikke trenger en større pakke, men vil legge til
+              akkurat det som gir mest verdi.
             </p>
           </div>
 
-          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-            {subscriptions.map((sub) => (
+          <div className="grid gap-px overflow-hidden border border-zinc-200 bg-zinc-200 md:grid-cols-2 lg:grid-cols-3">
+            {addons.map(([name, price]) => (
               <article
-                key={sub.name}
-                className="border border-zinc-200 bg-white p-8"
+                key={name}
+                className="group bg-[#fbfaf7] p-8 transition hover:bg-kodela-black hover:text-kodela-cream"
               >
-                <h3 className="text-2xl font-medium">{sub.name}</h3>
-                <p className="mt-4 text-3xl font-light text-kodela-gold">
-                  {sub.price}
-                </p>
-                <p className="mt-5 min-h-24 text-sm leading-7 text-zinc-600">
-                  {sub.text}
-                </p>
-                <ul className="mt-8 space-y-4 text-sm text-zinc-700">
-                  {sub.items.map((item) => (
-                    <li key={item} className="flex gap-3">
-                      <span className="text-kodela-gold">✓</span>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
+                <div className="mb-8 h-px w-12 bg-kodela-gold transition group-hover:w-20" />
+                <h3 className="text-2xl font-light">{name}</h3>
+                <p className="mt-4 text-kodela-gold">{price}</p>
               </article>
             ))}
           </div>
@@ -378,50 +315,45 @@ export default function Packages() {
         <div className="mx-auto max-w-7xl">
           <div className="mb-16 max-w-4xl">
             <p className="mb-4 text-sm uppercase tracking-[0.35rem] text-kodela-gold">
-              Tilleggstjenester
+              Drift og videre samarbeid
             </p>
-
             <h2 className="text-4xl font-light leading-tight md:text-6xl">
-              Bygg videre når behovet vokser.
+              Hold nettsiden oppdatert etter lansering.
             </h2>
           </div>
 
-          <div className="grid gap-px overflow-hidden border border-white/10 bg-white/10 md:grid-cols-2 lg:grid-cols-3">
-            {[
-              ["Logo & branding", "Fra 7 900 kr"],
-              ["SEO-pakke", "Fra 4 900 kr/mnd"],
-              ["AI-chatbot", "Fra 9 900 kr"],
-              ["Automatiseringer", "Fra 7 900 kr"],
-              ["Kundeportal", "Fra 24 900 kr"],
-              ["Bookingløsning", "Fra 9 900 kr"],
-              ["Innholdsproduksjon", "Fra 1 900 kr/mnd"],
-              ["Ekstra landingsside", "Fra 4 900 kr"],
-              ["Teknisk rådgivning", "Fra 950 kr/time"],
-            ].map(([name, price]) => (
-              <article key={name} className="bg-kodela-black p-8">
-                <h3 className="text-2xl font-medium">{name}</h3>
-                <p className="mt-4 text-kodela-gold">{price}</p>
+          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+            {carePlans.map(([name, price, text]) => (
+              <article
+                key={name}
+                className="border border-white/10 bg-white/[0.03] p-8 transition hover:-translate-y-2 hover:border-kodela-gold/60"
+              >
+                <h3 className="text-2xl font-light">{name}</h3>
+                <p className="mt-4 text-2xl text-kodela-gold">{price}</p>
+                <p className="mt-6 text-sm leading-7 text-kodela-muted">
+                  {text}
+                </p>
               </article>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="bg-kodela-cream px-6 py-28 text-kodela-black">
+      <section
+        className="bg-kodela-cream px-6 py-28 text-kodela-black"
+        id="contact"
+      >
         <div className="mx-auto max-w-5xl text-center">
           <p className="mb-4 text-sm uppercase tracking-[0.35rem] text-kodela-gold">
             Neste steg
           </p>
-
           <h2 className="text-4xl font-light leading-tight md:text-6xl">
             Usikker på hvilken pakke som passer?
           </h2>
-
           <p className="mx-auto mt-6 max-w-2xl leading-8 text-zinc-600">
-            fortell oss litt om bedriften, målet deres og hva dere ønsker å få
-            til. Vi anbefaler riktig nivå før dere bestemmer dere.
+            Send oss noen linjer om bedriften og hva dere ønsker hjelp med, så
+            anbefaler vi riktig nivå og eventuelle tillegg.
           </p>
-
           <a
             href="mailto:post@kodela.studio"
             className="mt-10 inline-block bg-kodela-black px-8 py-4 text-xs uppercase tracking-widest text-kodela-cream transition hover:bg-kodela-gold hover:text-kodela-black"
