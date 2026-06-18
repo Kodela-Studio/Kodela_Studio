@@ -2,25 +2,25 @@ const services = [
   {
     title: "Webdesign",
     description:
-      "Moderne, responsive og brukervennlige nettsider som gir bedriften din et profesjonelt førsteinntrykk.",
+      "Nettsider med tydelig struktur, moderne uttrykk og god brukeropplevelse fra første klikk.",
     icon: "▱",
   },
   {
-    title: "Digitale løsninger",
+    title: "UX & struktur",
     description:
-      "Skreddersydde løsninger som gjør hverdagen enklere, mer effektiv og bedre tilpasset dine behov.",
+      "Vi hjelper deg å gjøre innhold, flyt og kontaktvei enklere for kundene dine.",
     icon: "</>",
   },
   {
     title: "Nettsider",
     description:
-      "Raske, sikre og SEO-vennlige nettsider bygget for synlighet, tillit og vekst.",
+      "Raske, responsive og SEO-vennlige nettsider bygget for synlighet, tillit og vekst.",
     icon: "◇",
   },
   {
-    title: "Logo & Identitet",
+    title: "Logo & identitet",
     description:
-      "Visuell identitet, farger og uttrykk som hjelper merkevaren din å skille seg ut.",
+      "Visuell identitet, farger og typografi som gjør merkevaren din mer gjenkjennelig.",
     icon: "✦",
   },
 ];
@@ -38,20 +38,22 @@ export default function Services() {
           </p>
 
           <h2 className="text-4xl font-light leading-tight md:text-6xl">
-            Helhetlige digitale løsninger skreddersydd for din vekst.
+            Digitale løsninger som gjør det enklere å bli valgt.
           </h2>
 
-          <p className="mt-6 max-w-2xl text-zinc-600">
-            Vi kombinerer design, teknologi og strategi for å lage løsninger som
-            ikke bare ser bra ut, men som faktisk fungerer.
+          <p className="mt-6 max-w-2xl leading-8 text-zinc-600">
+            Vi kombinerer design, teknologi og strategi for å lage nettsider og
+            visuelle uttrykk som bygger tillit, skaper tydelighet og gjør det
+            enklere for kunder å ta kontakt.
           </p>
         </div>
 
         <div className="grid gap-px overflow-hidden border border-zinc-200 bg-zinc-200 md:grid-cols-2 lg:grid-cols-4">
           {services.map((service) => (
-            <article
+            <a
               key={service.title}
-              className="group bg-kodela-cream p-8 transition hover:bg-white"
+              href="/packages"
+              className="group block bg-kodela-cream p-8 transition duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-2xl"
             >
               <div className="mb-10 text-4xl text-kodela-gold">
                 {service.icon}
@@ -63,13 +65,10 @@ export default function Services() {
                 {service.description}
               </p>
 
-              <a
-                href="/packages"
-                className="mt-8 inline-block text-xs uppercase tracking-widest text-kodela-black transition group-hover:translate-x-1 group-hover:text-kodela-gold"
-              >
-                Les mer →
-              </a>
-            </article>
+              <span className="mt-8 inline-block text-xs uppercase tracking-widest text-kodela-black transition group-hover:translate-x-1 group-hover:text-kodela-gold">
+                Se pakker →
+              </span>
+            </a>
           ))}
         </div>
       </div>
