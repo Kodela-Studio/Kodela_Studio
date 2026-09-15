@@ -3,7 +3,7 @@ const packages = [
     name: "Start",
     price: "Fra 9 900 kr",
     label: "Lav terskel",
-    bestFor: "Enkeltpersonforetak, små lokale bedrifter og nye prosjekter.",
+    bestFor: "For nye prosjekter, enkeltpersonforetak og små lokale bedrifter.",
     result:
       "En enkel, pen og mobiltilpasset nettside som gir et profesjonelt førsteinntrykk.",
     includes: [
@@ -19,7 +19,7 @@ const packages = [
     name: "Essential",
     price: "Fra 14 900 kr",
     label: "Trygg start",
-    bestFor: "Små bedrifter som trenger en mer komplett nettside.",
+    bestFor: "For små bedrifter som trenger en mer komplett digital base.",
     result:
       "En profesjonell nettside med tydelig struktur, godt uttrykk og enkel kontaktvei.",
     includes: [
@@ -36,7 +36,8 @@ const packages = [
     name: "Growth",
     price: "Fra 24 900 kr",
     label: "Mest valgt",
-    bestFor: "Bedrifter som vil forbedre nettsiden og få flere henvendelser.",
+    bestFor:
+      "For bedrifter som vil forbedre nettsiden og få flere henvendelser.",
     result:
       "En mer strategisk nettside med bedre UX, sterkere merkevare og tydeligere vei til kontakt.",
     includes: [
@@ -54,7 +55,7 @@ const packages = [
     price: "Fra 39 900 kr",
     label: "For større behov",
     bestFor:
-      "Etablerte bedrifter som trenger mer innhold, bedre flyt og funksjoner.",
+      "For etablerte bedrifter som trenger mer innhold, bedre flyt og flere funksjoner.",
     result:
       "En gjennomarbeidet nettside med sterkere brukeropplevelse, spesialseksjoner og enkel booking.",
     includes: [
@@ -109,50 +110,126 @@ const carePlans = [
 
 export default function Packages() {
   return (
-    <main className="bg-kodela-black pt-32 text-kodela-cream">
+    <main className="bg-kodela-black pt-28 text-kodela-cream">
       <section className="relative overflow-hidden px-6 py-24 md:py-36">
-        <div className="absolute left-1/2 top-0 h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-kodela-gold/10 blur-3xl" />
+        <div className="absolute left-1/2 top-0 h-[640px] w-[640px] -translate-x-1/2 rounded-full bg-kodela-gold/10 blur-3xl" />
+        <div className="absolute right-0 top-36 h-96 w-96 rounded-full bg-white/5 blur-3xl" />
 
-        <div className="relative mx-auto grid max-w-7xl gap-16 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
+        <div className="relative mx-auto grid max-w-7xl gap-16 lg:grid-cols-[1.08fr_0.92fr] lg:items-center">
           <div>
             <p className="mb-6 text-sm uppercase tracking-[0.45rem] text-kodela-gold">
               Tjenester og pakker
             </p>
 
-            <h1 className="max-w-5xl text-5xl font-light leading-[1.05] md:text-7xl">
-              Nettsider og digitale uttrykk som gjør bedriften enklere å velge.
+            <h1 className="max-w-5xl text-5xl font-light leading-[0.98] md:text-7xl">
+              Gjør et sterkere førsteinntrykk.
+              <span className="block text-kodela-gold">
+                Få flere til å velge deg.
+              </span>
             </h1>
 
             <p className="mt-8 max-w-2xl text-lg leading-8 text-kodela-muted">
-              Vi hjelper små og mellomstore bedrifter med nettsider, design,
-              merkevare, struktur og videre drift. Her finner du tydelige
-              pakker, realistiske priser og fleksible tillegg.
+              Vi designer nettsider, visuelle identiteter og digitale
+              opplevelser som bygger tillit, gjør bedriften tydeligere og senker
+              terskelen for at kunder tar kontakt.
             </p>
+
+            <div className="mt-12 flex flex-wrap gap-4">
+              <a
+                href="#packages"
+                className="border border-kodela-gold bg-kodela-gold px-8 py-4 text-xs uppercase tracking-widest text-kodela-black transition hover:bg-transparent hover:text-kodela-gold"
+              >
+                Se pakkene
+              </a>
+
+              <a
+                href="mailto:post@kodela.studio"
+                className="border border-white/15 px-8 py-4 text-xs uppercase tracking-widest text-kodela-cream transition hover:border-kodela-gold hover:text-kodela-gold"
+              >
+                Få anbefaling
+              </a>
+            </div>
+
+            <div className="mt-16 grid max-w-3xl gap-6 border-t border-white/10 pt-8 sm:grid-cols-3">
+              <div>
+                <p className="text-3xl font-light text-kodela-gold">01</p>
+                <p className="mt-2 text-sm leading-6 text-kodela-muted">
+                  Strategisk struktur før design
+                </p>
+              </div>
+
+              <div>
+                <p className="text-3xl font-light text-kodela-gold">02</p>
+                <p className="mt-2 text-sm leading-6 text-kodela-muted">
+                  Responsivt på alle enheter
+                </p>
+              </div>
+
+              <div>
+                <p className="text-3xl font-light text-kodela-gold">03</p>
+                <p className="mt-2 text-sm leading-6 text-kodela-muted">
+                  Bygget for synlighet og kontakt
+                </p>
+              </div>
+            </div>
           </div>
 
-          <div className="border border-white/10 bg-white/[0.03] p-8 backdrop-blur">
-            <p className="text-sm uppercase tracking-[0.3rem] text-kodela-gold">
-              Kodela-metoden
-            </p>
-            <h2 className="mt-5 text-3xl font-light">
-              Start smart. Bygg videre når behovet vokser.
-            </h2>
-            <p className="mt-5 leading-7 text-kodela-muted">
-              Vi holder pakkene tydelige, men fleksible. Du velger et nivå, så
-              legger vi kun til det som faktisk gir verdi.
-            </p>
+          <div className="relative">
+            <div className="border border-white/10 bg-white/[0.04] p-8 shadow-2xl backdrop-blur">
+              <p className="text-sm uppercase tracking-[0.3rem] text-kodela-gold">
+                Kodela-metoden
+              </p>
+
+              <h2 className="mt-5 text-3xl font-light leading-tight">
+                Design først.
+                <br />
+                Resultater etterpå.
+              </h2>
+
+              <p className="mt-5 leading-7 text-kodela-muted">
+                Vi starter med målene deres, kartlegger hva kundene trenger og
+                bygger en løsning som både ser profesjonell ut og gjør jobben
+                den skal.
+              </p>
+
+              <div className="mt-8 grid gap-px overflow-hidden border border-white/10 bg-white/10">
+                {[
+                  "Tydeligere budskap",
+                  "Bedre brukerflyt",
+                  "Sterkere digital troverdighet",
+                ].map((item) => (
+                  <div
+                    key={item}
+                    className="flex items-center gap-3 bg-kodela-black/70 p-4 text-sm text-kodela-muted"
+                  >
+                    <span className="text-kodela-gold">✦</span>
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="absolute -bottom-6 -right-6 hidden border border-kodela-gold bg-kodela-black px-6 py-5 text-sm text-kodela-muted shadow-2xl md:block">
+              <span className="block text-xs uppercase tracking-[0.25rem] text-kodela-gold">
+                Neste steg
+              </span>
+              Velg pakke eller spør oss først.
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="bg-kodela-cream px-6 py-28 text-kodela-black">
+      <section
+        id="packages"
+        className="bg-kodela-cream px-6 py-28 text-kodela-black"
+      >
         <div className="mx-auto max-w-7xl">
           <div className="mb-16 max-w-4xl">
             <p className="mb-4 text-sm uppercase tracking-[0.35rem] text-kodela-gold">
               Våre pakker
             </p>
             <h2 className="text-4xl font-light leading-tight md:text-6xl">
-              Velg pakken som passer akkurat nå.
+              Velg nivået som passer bedriften akkurat nå.
             </h2>
             <p className="mt-6 max-w-2xl leading-8 text-zinc-600">
               Prisene er startpriser eks. mva. Endelig tilbud avhenger av

@@ -8,7 +8,9 @@ import Packages from "./components/Packages";
 import Chatbot from "./components/Chatbot";
 
 function App() {
-  const isPackagesPage = window.location.pathname === "/packages";
+  const pathname = window.location.pathname.toLowerCase().replace(/\/$/, "");
+
+  const isPackagesPage = pathname === "/packages";
 
   return (
     <div className="min-h-screen bg-kodela-black text-kodela-cream">
