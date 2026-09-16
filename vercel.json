@@ -1,4 +1,8 @@
 {
+  "redirects": [
+    { "source": "/packages", "destination": "/tjenester", "permanent": true },
+    { "source": "/nettsider", "destination": "/tjenester/nettside", "permanent": true }
+  ],
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
   ]
