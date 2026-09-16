@@ -1,12 +1,12 @@
+import studioImage from "../assets/kodela-studio-workspace.png";
+
 export default function Projects() {
   return (
     <section id="projects" className="overflow-hidden bg-[#0d0d0d] text-kodela-cream">
-      <div className="grid lg:min-h-[650px] lg:grid-cols-2">
-        <div className="relative min-h-[420px] overflow-hidden border-y border-white/10 lg:min-h-full lg:border-r lg:border-t-0">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_25%_38%,rgba(201,166,107,.18),transparent_22%),linear-gradient(145deg,#27231c,#111_52%,#080808)]" />
-          <div className="absolute bottom-[13%] left-[12%] h-[45%] w-[72%] border border-white/10 bg-[#171614] shadow-[0_35px_90px_rgba(0,0,0,.5)]" />
-          <div className="absolute bottom-[20%] left-[20%] h-[28%] w-[42%] border-l border-kodela-gold/35 bg-black/15" />
-          <div className="absolute left-[15%] top-[14%] h-40 w-40 rounded-full bg-kodela-gold/10 blur-3xl" />
+      <div className="grid lg:min-h-[680px] lg:grid-cols-2">
+        <div className="relative min-h-[440px] overflow-hidden border-y border-white/10 lg:min-h-full lg:border-r lg:border-t-0">
+          <img src={studioImage} alt="Kodela Studio kreativt arbeidsmiljø" className="absolute inset-0 h-full w-full object-cover object-center transition duration-700" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-black/10" />
           <p className="absolute bottom-8 left-8 max-w-xs text-xs uppercase tracking-[.22em] text-kodela-gold sm:bottom-10 sm:left-10">Strategi · design · utvikling</p>
         </div>
 
