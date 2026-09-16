@@ -1,12 +1,12 @@
 import { useEffect } from "react";
 import ServiceDetails from "./ServiceDetails";
 import { serviceCatalog, servicePageHref, serviceEmailHref } from "../data/serviceCatalog";
-import heroImage from "../assets/heroKodela.png";
-import mobileImage from "../assets/mobile.png";
-import bookImage from "../assets/book.png";
+import serviceHero from "../assets/tjenester1.png";
+import serviceMobile from "../assets/tjenester2.png";
+import serviceLaptop from "../assets/tjenester3.png";
 import "../styles/servicePages.css";
 
-const serviceImages = [heroImage, mobileImage, bookImage];
+const serviceImages = [serviceLaptop, serviceMobile, serviceHero];
 
 export default function Packages() {
   const pathname = window.location.pathname;
@@ -23,20 +23,28 @@ export default function Packages() {
 
   return (
     <div className="ks-pages">
-      <section className="ks-services-hero">
-        <img src={heroImage} alt="" aria-hidden="true" className="ks-services-hero-image" />
-        <div className="ks-services-hero-shade" />
-        <div className="ks-container ks-services-hero-content">
-          <p className="ks-label">Tjenester</p>
-          <h1>En sterk digital tilstedeværelse starter med <span>det viktigste.</span></h1>
-          <p className="ks-lead">Vi holder det enkelt: en profesjonell nettside som grunnmur, booking når kundene skal bestille, og oppfølging når du vil ha hjelp videre.</p>
-          <a className="ks-button ks-button-gold" href="#tjenester">Se tjenestene <span>↓</span></a>
+      <section className="ks-services-intro">
+        <div className="ks-container ks-services-intro-grid">
+          <div className="ks-services-intro-copy">
+            <p className="ks-label">Tjenester</p>
+            <h1>Det digitale grunnlaget bedriften din <span>trenger.</span></h1>
+            <p className="ks-lead">Fra første nettside til booking og videre oppfølging. Vi bygger det viktigste først, og lar løsningen vokse når bedriften trenger mer.</p>
+            <a className="ks-button ks-button-gold" href="#tjenester">Se tjenestene <span>↓</span></a>
+          </div>
+          <div className="ks-services-intro-visual">
+            <img src={serviceHero} alt="Digitalt arbeid med nettside" />
+            <div className="ks-services-intro-frame" aria-hidden="true" />
+            <p>Strategi · design · utvikling</p>
+          </div>
         </div>
       </section>
 
       <section id="tjenester" className="ks-services-section">
         <div className="ks-container">
-          <div className="ks-services-heading"><div><p className="ks-label">Det vi tilbyr</p><h2>Tre tjenester. Ingen unødvendige pakker.</h2></div><p>Velg det bedriften trenger nå. Vi avklarer alltid omfang og pris før vi starter.</p></div>
+          <div className="ks-services-heading">
+            <div><p className="ks-label">Det vi tilbyr</p><h2>Enkelt å forstå. Enkelt å velge.</h2></div>
+            <p>Tre tydelige tjenester uten en jungel av pakker. Vi finner omfanget sammen og gir deg en konkret pris før vi starter.</p>
+          </div>
           {selectedId && <p role="status" className="ks-notice">Vi fant ikke denne tjenesten. Velg en av tjenestene under.</p>}
           <div className="ks-visual-cards">
             {serviceCatalog.map((item,index) => (
@@ -44,7 +52,10 @@ export default function Packages() {
                 <img src={serviceImages[index]} alt="" aria-hidden="true" />
                 <div className="ks-visual-card-shade" />
                 <span className="ks-number">{item.number}</span>
-                <div className="ks-visual-card-copy"><p>{item.category}</p><h3>{item.name}</h3><p className="ks-visual-intro">{item.intro}</p><div><span>{item.price}</span><span className="ks-arrow">→</span></div></div>
+                <div className="ks-visual-card-copy">
+                  <p>{item.category}</p><h3>{item.name}</h3><p className="ks-visual-intro">{item.intro}</p>
+                  <div><span>{item.price}</span><span className="ks-arrow">→</span></div>
+                </div>
               </a>
             ))}
           </div>
@@ -52,8 +63,23 @@ export default function Packages() {
         </div>
       </section>
 
+      <section className="ks-service-feature">
+        <div className="ks-container ks-service-feature-grid">
+          <div className="ks-service-feature-image"><img src={serviceMobile} alt="Mobilvisning av en moderne nettside" /></div>
+          <div className="ks-service-feature-copy">
+            <p className="ks-label">Laget for virkeligheten</p>
+            <h2>Like gjennomført på mobilen som på stor skjerm.</h2>
+            <p>De fleste møter bedriften din på en skjerm. Derfor designer vi med tydelig innhold, raske kontaktveier og responsiv oppførsel som en selvfølgelig del av løsningen.</p>
+            <div className="ks-mini-points"><span>Responsivt design</span><span>Tydelig struktur</span><span>Enkel kontaktvei</span></div>
+          </div>
+        </div>
+      </section>
+
       <section className="ks-services-principle">
-        <div className="ks-container ks-principle-grid"><div><p className="ks-label">Slik tenker vi</p><h2>Godt design skal gjøre jobben enklere.</h2></div><div><p>Nettsiden skal ikke bare se gjennomført ut. Den skal gjøre det tydelig hvem dere er, hva dere tilbyr og hva kunden skal gjøre videre.</p><a href={serviceEmailHref("nettside")} className="ks-text-link">Fortell oss om prosjektet <span>→</span></a></div></div>
+        <div className="ks-container ks-principle-grid">
+          <div><p className="ks-label">Slik tenker vi</p><h2>Færre ting. Gjort skikkelig.</h2></div>
+          <div><p>En god nettside trenger ikke være full av funksjoner. Den trenger et tydelig budskap, et uttrykk som passer bedriften og en vei videre som kunden forstår.</p><a href={serviceEmailHref("nettside")} className="ks-text-link">Fortell oss om prosjektet <span>→</span></a></div>
+        </div>
       </section>
 
       <section className="ks-bottom"><div className="ks-container ks-bottom-inner"><div><p className="ks-label">Klar for neste steg?</p><h2>La oss skape noe bra sammen.</h2><p>Fortell oss kort hva bedriften trenger, så tar vi det derfra.</p></div><a className="ks-button ks-button-gold" href={serviceEmailHref("nettside")}>Ta kontakt <span>→</span></a></div></section>
