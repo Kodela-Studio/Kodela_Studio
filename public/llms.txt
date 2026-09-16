@@ -1,0 +1,19 @@
+# Kodela Studio
+
+Kodela Studio designer og utvikler profesjonelle, raske og mobilvennlige nettsider og digitale løsninger for små bedrifter i Norge.
+
+## Viktige sider
+
+- [Forside](https://kodelastudio.no/)
+- [Tjenester og priser](https://kodelastudio.no/tjenester)
+- [Nettside](https://kodelastudio.no/tjenester/nettside)
+- [Booking](https://kodelastudio.no/tjenester/booking)
+- [Oppfølging](https://kodelastudio.no/tjenester/oppfolging)
+- [Om Kodela Studio](https://kodelastudio.no/om-oss)
+- [Kontakt](https://kodelastudio.no/kontakt)
+- [Personvern](https://kodelastudio.no/personvern)
+
+## Kontakt
+
+- [Kontakt Kodela Studio](https://kodelastudio.no/kontakt)
+- E-post: post@kodela.studio
