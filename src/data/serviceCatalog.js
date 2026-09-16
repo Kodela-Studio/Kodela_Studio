@@ -152,7 +152,7 @@ export const serviceCatalog = [
     shortIncludes: [
       "Enkel månedlig sjekk",
       "Små tekst- og bildeendringer",
-      "Inntil 30 minutter samlet per måned",
+      "Inntil 1 time samlet per måned",
     ],
     heading: "Litt hjelp til å holde nettsiden oppdatert.",
     audience:
@@ -167,8 +167,8 @@ export const serviceCatalog = [
         "Vi kan bytte bilder og oppdatere for eksempel åpningstider eller korte tekster du sender oss.",
       ],
       [
-        "30 minutter samlet",
-        "Sjekken og endringene deler én tidsramme på inntil 30 minutter per måned. Vi avtaler pris først hvis en oppgave krever mer tid.",
+        "1 time samlet",
+        "Sjekken og endringene deler én tidsramme på inntil 1 time per måned. Vi avtaler pris først hvis en oppgave krever mer tid.",
       ],
     ],
     preparation:
