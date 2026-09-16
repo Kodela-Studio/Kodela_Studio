@@ -1,33 +1,35 @@
-import heroStudio from "../assets/kodela-hero-studio.png";
+import heroStudio from "../assets/heroKodela.png";
 
 export default function Hero() {
   return (
-    <main className="relative overflow-hidden bg-kodela-black pt-24 text-kodela-cream sm:pt-28">
-      <section className="relative min-h-[calc(100svh-6rem)] border-b border-white/10">
-        <img src={heroStudio} alt="Kodela Studio arbeidsmiljø" className="absolute inset-0 h-full w-full object-cover object-[62%_center]" />
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(10,10,10,.98)_0%,rgba(10,10,10,.91)_38%,rgba(10,10,10,.48)_67%,rgba(10,10,10,.18)_100%)]" />
-        <div className="absolute inset-0 bg-[linear-gradient(0deg,rgba(10,10,10,.74)_0%,transparent_42%)] lg:hidden" />
+    <main className="overflow-hidden bg-kodela-black pt-24 text-kodela-cream sm:pt-28">
+      <section className="relative min-h-[640px] border-b border-white/10 sm:min-h-[700px] lg:min-h-[calc(100svh-7rem)]">
+        <img src={heroStudio} alt="Digitalt designarbeid for Kodela Studio" className="absolute inset-0 h-full w-full object-cover object-[64%_center] sm:object-[62%_center]" />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(8,8,8,.99)_0%,rgba(8,8,8,.94)_35%,rgba(8,8,8,.63)_57%,rgba(8,8,8,.18)_82%,rgba(8,8,8,.08)_100%)]" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/15 lg:hidden" />
 
-        <div className="relative mx-auto flex min-h-[calc(100svh-6rem)] max-w-7xl items-center px-6 py-16 sm:py-20">
-          <div className="w-full lg:max-w-[58%]">
-            <p className="mb-6 text-[0.68rem] uppercase tracking-[0.34em] text-kodela-gold sm:text-xs">Nettsider som skaper muligheter</p>
-            <h1 className="max-w-4xl text-[clamp(3rem,13vw,5.2rem)] font-light leading-[.94] tracking-[-.055em] sm:text-7xl lg:text-[clamp(4.8rem,6.2vw,6.8rem)]">Digitale løsninger for <span className="text-kodela-gold">ambisiøse</span> bedrifter.</h1>
-            <p className="mt-8 max-w-xl text-base leading-8 text-kodela-muted sm:text-lg">Vi designer og utvikler nettsider som ser bra ut, fungerer sømløst og gjør det enkelt for kundene dine å ta neste steg.</p>
-            <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-              <a href="/packages" className="bg-kodela-gold px-8 py-4 text-center text-xs uppercase tracking-[.17em] text-kodela-black transition hover:bg-[#d8b77f]">Se tjenester <span className="ml-4">→</span></a>
-              <a href="mailto:post@kodela.studio?subject=Prosjektforespørsel" className="px-1 py-4 text-center text-xs uppercase tracking-[.17em] text-kodela-cream sm:border-b sm:border-kodela-gold/60">Ta kontakt <span className="ml-4 text-kodela-gold">→</span></a>
+        <div className="relative mx-auto flex min-h-[640px] max-w-7xl items-center px-6 py-16 sm:min-h-[700px] lg:min-h-[calc(100svh-7rem)]">
+          <div className="max-w-[760px] lg:w-[55%]">
+            <p className="mb-6 text-[.66rem] uppercase tracking-[.34em] text-kodela-gold sm:text-xs">Nettsider som skaper muligheter</p>
+            <h1 className="text-[clamp(3rem,12vw,5.4rem)] font-light leading-[.94] tracking-[-.055em] lg:text-[clamp(4.8rem,6vw,6.6rem)]">Digitale løsninger for <span className="text-kodela-gold">ambisiøse</span> bedrifter.</h1>
+            <p className="mt-7 max-w-xl text-base leading-7 text-zinc-300 sm:mt-8 sm:text-lg sm:leading-8">Vi designer og utvikler nettsider som ser bra ut, fungerer sømløst og faktisk skaper resultater.</p>
+            <div className="mt-9 flex flex-col gap-4 sm:mt-10 sm:flex-row sm:items-center">
+              <a href="/packages" className="bg-kodela-gold px-8 py-4 text-center text-xs uppercase tracking-[.17em] text-kodela-black transition hover:bg-[#d8b77f]">Se tjenester <span className="ml-5">→</span></a>
+              <a href="mailto:post@kodela.studio?subject=Prosjektforespørsel" className="px-2 py-4 text-center text-xs uppercase tracking-[.17em] text-kodela-cream sm:border-b sm:border-kodela-gold/60">Ta kontakt <span className="ml-5 text-kodela-gold">→</span></a>
             </div>
           </div>
         </div>
 
-        <div className="relative border-t border-white/10 bg-black/55 backdrop-blur-sm">
-          <div className="mx-auto grid max-w-7xl px-6 sm:grid-cols-3">
-            {[["01","Strategisk","Vi starter med bedriften og målene deres."],["02","Gjennomtenkt","Design der estetikk og funksjon jobber sammen."],["03","Responsivt","En god opplevelse på alle skjermstørrelser."]].map(([number,title,text],index)=>(
-              <div key={number} className={`py-6 sm:px-7 sm:py-7 ${index>0?"border-t border-white/10 sm:border-l sm:border-t-0":""}`}><div className="flex gap-5"><span className="text-xs text-kodela-gold">{number}</span><div><h2 className="text-base font-normal">{title}.</h2><p className="mt-1 text-xs leading-6 text-kodela-muted">{text}</p></div></div></div>
-            ))}
-          </div>
-        </div>
+        <a href="#services" aria-label="Gå til tjenester" className="absolute bottom-8 right-6 hidden text-[.62rem] uppercase tracking-[.25em] text-zinc-400 transition hover:text-kodela-gold lg:block">Scroll ned <span className="ml-4 text-kodela-gold">↓</span></a>
       </section>
+
+      <div className="border-b border-white/10 bg-[#0d0d0d]">
+        <div className="mx-auto flex max-w-7xl flex-col gap-5 px-6 py-6 sm:flex-row sm:items-center sm:gap-10">
+          <p className="max-w-[160px] text-[.62rem] uppercase leading-5 tracking-[.18em] text-zinc-300">Vi jobber med bedrifter som vil mer</p>
+          <span className="hidden h-px flex-1 bg-white/10 sm:block" />
+          <div className="flex flex-wrap gap-x-7 gap-y-3 text-[.62rem] uppercase tracking-[.18em] text-zinc-500 sm:justify-end"><span>Lokal</span><span>E-handel</span><span>Tjenester</span><span>Restaurant</span><span>Helse</span><span>Og flere</span></div>
+        </div>
+      </div>
     </main>
   );
 }
