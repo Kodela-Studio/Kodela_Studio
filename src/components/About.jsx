@@ -1,36 +1,89 @@
 const teamMembers = [
-  { name: "Anna", role: "Utvikling & grafisk design", text: "Anna kombinerer teknisk utvikling med et sterkt visuelt blikk og jobber med å forme digitale løsninger som både fungerer og har et tydelig uttrykk." },
-  { name: "Helena", role: "Utvikling & UX-design", text: "Helena jobber i skjæringspunktet mellom utvikling, struktur og brukeropplevelse, med fokus på å gjøre digitale løsninger intuitive, tydelige og enkle å bruke." },
-  { name: "Janina", role: "Utvikling & sikkerhet", text: "Janina kombinerer utvikling med fokus på sikkerhet og teknisk kvalitet, og bidrar til at løsningene bygges på et solid fundament." },
+  { name: "Anna", role: "Utvikling & grafisk design", text: "Kombinerer utvikling med et visuelt blikk og jobber med å gi løsningene et tydelig, gjennomført uttrykk." },
+  { name: "Helena", role: "Utvikling & UX-design", text: "Jobber med struktur, utvikling og brukeropplevelse, slik at løsningene blir intuitive, tydelige og enkle å bruke." },
+  { name: "Janina", role: "Utvikling & sikkerhet", text: "Har fokus på utvikling, teknisk kvalitet og sikkerhet, slik at løsningene får et solid fundament." },
 ];
 
-function KodelaMotion() {
-  return <div className="relative aspect-square w-full max-w-[540px] overflow-hidden" aria-hidden="true">
-    <div className="absolute inset-[10%] rounded-full border border-[#c9a66b]/25 motion-safe:animate-[spin_28s_linear_infinite]" />
-    <div className="absolute inset-[22%] rounded-full border border-white/15 motion-safe:animate-[spin_20s_linear_infinite_reverse]" />
-    <div className="absolute left-1/2 top-1/2 h-px w-[78%] -translate-x-1/2 -translate-y-1/2 rotate-[24deg] bg-gradient-to-r from-transparent via-[#c9a66b]/70 to-transparent" />
-    <div className="absolute left-1/2 top-1/2 h-px w-[70%] -translate-x-1/2 -translate-y-1/2 -rotate-[35deg] bg-gradient-to-r from-transparent via-white/25 to-transparent" />
-    <div className="absolute left-[12%] top-[34%] h-2 w-2 rounded-full bg-[#c9a66b] shadow-[0_0_30px_rgba(201,166,107,.8)] motion-safe:animate-pulse" />
-    <div className="absolute right-[16%] top-[18%] h-1.5 w-1.5 rounded-full bg-[#c9a66b]/80 motion-safe:animate-pulse" />
-    <div className="absolute bottom-[18%] right-[27%] h-1 w-1 rounded-full bg-white/70 motion-safe:animate-pulse" />
-    <div className="absolute inset-0 flex items-center justify-center"><div className="text-center"><span className="block text-[10px] uppercase tracking-[.55em] text-[#c9a66b]">Kodela</span><span className="mt-4 block text-5xl font-extralight tracking-[-.08em] text-white/90 sm:text-7xl">&lt; / &gt;</span><span className="mt-4 block text-[9px] uppercase tracking-[.4em] text-white/35">Design · Code · Direction</span></div></div>
-  </div>;
-}
+const principles = [
+  ["Direkte kontakt", "Du snakker med menneskene som faktisk designer og utvikler løsningen."],
+  ["Riktig omfang", "Vi starter med behovet og bygger det som gir mening for bedriften, uten unødvendige funksjoner."],
+  ["Én helhet", "Design, brukeropplevelse og teknologi utvikles sammen, ikke som separate deler."],
+];
 
 export default function About({ page = false }) {
-  if (!page) return <section id="about" className="bg-kodela-black px-6 py-20 text-kodela-cream sm:py-28"><div className="mx-auto max-w-7xl"><div className="grid gap-10 lg:grid-cols-[1fr_.72fr] lg:items-center"><div><p className="mb-5 text-xs uppercase tracking-[.32em] text-kodela-gold">Kodela Studio</p><h2 className="max-w-3xl text-4xl font-light leading-[1.05] tracking-[-.04em] sm:text-6xl">Tre perspektiver. Én tydelig retning.</h2><p className="mt-7 max-w-xl text-base leading-8 text-kodela-muted">Vi kombinerer utvikling, brukeropplevelse, grafisk design og sikkerhet. Det gjør at vi kan tenke helhetlig uten å gjøre prosessen unødvendig komplisert.</p><a href="/om-oss" className="mt-6 inline-block border-b border-kodela-gold/70 pb-2 text-[10px] uppercase tracking-[.17em]">Bli kjent med Kodela <span className="ml-4 text-kodela-gold">→</span></a></div><div className="lg:justify-self-end"><KodelaMotion /></div></div><div className="mt-16 flex flex-col gap-8 border-t border-white/10 pt-12 sm:flex-row sm:items-end sm:justify-between"><div><p className="mb-4 text-xs uppercase tracking-[.28em] text-kodela-gold">Klar for neste steg?</p><h2 className="text-3xl font-light tracking-[-.03em] sm:text-5xl">La oss skape noe bra sammen.</h2></div><a href="mailto:post@kodela.studio?subject=Prosjektforespørsel" className="shrink-0 bg-kodela-gold px-8 py-4 text-center text-xs uppercase tracking-[.16em] text-kodela-black">Ta kontakt <span className="ml-4">→</span></a></div></div></section>;
+  if (!page) {
+    return (
+      <section id="about" className="border-t border-white/10 bg-kodela-black px-6 py-20 text-kodela-cream sm:py-28">
+        <div className="mx-auto max-w-7xl">
+          <div className="grid gap-10 lg:grid-cols-[1fr_.72fr] lg:items-end lg:gap-24">
+            <div><p className="mb-5 text-[10px] uppercase tracking-[.32em] text-kodela-gold">Kodela Studio</p><h2 className="max-w-3xl text-4xl font-light leading-[1.04] tracking-[-.045em] sm:text-6xl">Tre perspektiver.<br/>Én tydelig retning.</h2></div>
+            <div className="max-w-xl lg:justify-self-end"><p className="mb-0 text-base leading-8 text-kodela-muted">Vi kombinerer utvikling, brukeropplevelse, grafisk design og sikkerhet i ett lite team.</p><a href="/om-oss" className="mt-6 inline-block border-b border-kodela-gold/70 pb-2 text-[10px] uppercase tracking-[.17em]">Bli kjent med Kodela <span className="ml-4 text-kodela-gold">→</span></a></div>
+          </div>
+        </div>
+      </section>
+    );
+  }
 
-  return <main className="bg-kodela-black pt-24 text-kodela-cream">
-    <section className="relative overflow-hidden border-b border-white/10 px-6 py-20 sm:py-28 lg:py-32"><div className="absolute -right-48 -top-48 h-[620px] w-[620px] rounded-full bg-[#c9a66b]/[.035] blur-3xl"/><div className="relative mx-auto grid max-w-7xl gap-14 lg:grid-cols-[1.15fr_.65fr] lg:items-center"><div><p className="mb-7 text-[10px] uppercase tracking-[.34em] text-kodela-gold">Om Kodela Studio</p><h1 className="text-[clamp(3.5rem,7vw,6.8rem)] font-light leading-[.92] tracking-[-.06em]">Tre mennesker.<br/><span className="text-kodela-gold">Ulike styrker.</span><br/>Én retning.</h1><p className="mt-10 max-w-2xl border-t border-white/15 pt-8 text-xl font-light leading-9 text-zinc-200 sm:text-2xl sm:leading-10">Gode digitale løsninger skal være gjennomtenkte, forståelige og laget for bedriften som faktisk skal bruke dem.</p></div><div className="hidden lg:flex lg:justify-end"><KodelaMotion /></div></div></section>
+  return (
+    <main className="bg-kodela-black pt-24 text-kodela-cream">
+      <section className="relative overflow-hidden border-b border-white/10 px-6 py-20 sm:py-28 lg:py-36">
+        <div aria-hidden="true" className="pointer-events-none absolute right-[-4vw] top-1/2 hidden -translate-y-1/2 select-none text-[clamp(9rem,22vw,22rem)] font-light leading-none tracking-[-.09em] text-white/[.018] lg:block">K</div>
+        <div className="relative mx-auto max-w-7xl">
+          <p className="mb-8 text-[10px] uppercase tracking-[.36em] text-kodela-gold">Om Kodela Studio</p>
+          <h1 className="max-w-6xl text-[clamp(3.7rem,8vw,7.8rem)] font-light leading-[.9] tracking-[-.065em]">Tre mennesker.<br/><span className="text-kodela-gold">Ulike styrker.</span><br/>Én retning.</h1>
+          <div className="mt-14 grid gap-8 border-t border-white/15 pt-8 lg:grid-cols-[1.2fr_.62fr] lg:gap-24">
+            <p className="mb-0 max-w-2xl text-xl font-light leading-9 text-zinc-200 sm:text-2xl sm:leading-10">Vi bygger digitale løsninger som skal være like tydelige å bruke som de er gjennomtenkte å se på.</p>
+            <p className="mb-0 max-w-md text-sm leading-7 text-kodela-muted lg:justify-self-end">Kodela samler utvikling, design, brukeropplevelse og sikkerhet i ett lite team. Det betyr færre mellomledd og tettere samarbeid fra idé til ferdig løsning.</p>
+          </div>
+        </div>
+      </section>
 
-    <section className="px-6 py-20 sm:py-24 lg:py-28"><div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[.72fr_1fr] lg:gap-24"><div><p className="mb-5 text-[10px] uppercase tracking-[.3em] text-kodela-gold">Hvorfor Kodela</p><h2 className="max-w-xl text-4xl font-light leading-[1.05] tracking-[-.045em] sm:text-5xl">Vi ville bygge annerledes.</h2></div><div className="max-w-2xl text-base leading-8 text-kodela-muted lg:pt-9"><p>Kodela Studio ble startet av tre utviklere med ulike faglige styrker, men med samme syn på hva en god digital løsning bør være.</p><p className="mt-6">Vi ønsket å samle utvikling, design, brukeropplevelse og sikkerhet i ett team, uten unødvendige mellomledd mellom kunden og menneskene som faktisk gjør jobben.</p><p className="mt-6 text-zinc-200">Derfor jobber du direkte med oss, fra de første idéene til løsningen er publisert.</p></div></div></section>
+      <section className="px-6 py-20 sm:py-24 lg:py-28">
+        <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[.7fr_1fr] lg:gap-24">
+          <div><p className="mb-5 text-[10px] uppercase tracking-[.3em] text-kodela-gold">Hvorfor Kodela</p><h2 className="max-w-lg text-4xl font-light leading-[1.05] tracking-[-.045em] sm:text-5xl">Et lite byrå med plass til å tenke helhetlig.</h2></div>
+          <div className="max-w-2xl text-base leading-8 text-kodela-muted lg:pt-8"><p>Kodela Studio ble startet av tre utviklere med forskjellige faglige styrker og et felles syn på godt digitalt arbeid.</p><p className="mt-6">Vi ønsket en arbeidsmåte der de som forstår løsningen også er de som møter kunden. Der design og teknologi utvikles sammen, og der prosjektet ikke blir større eller mer komplisert enn det trenger å være.</p><p className="mt-6 text-zinc-200">Hos oss jobber du direkte med teamet som bygger løsningen din.</p></div>
+        </div>
+      </section>
 
-    <section className="border-y border-white/10 bg-[#101010] px-6 py-20 sm:py-24 lg:py-28"><div className="mx-auto max-w-7xl"><div className="mb-14 grid gap-7 lg:grid-cols-[1fr_.65fr] lg:items-end lg:gap-20"><div><p className="mb-5 text-[10px] uppercase tracking-[.3em] text-kodela-gold">Menneskene bak</p><h2 className="max-w-3xl text-4xl font-light leading-[1.04] tracking-[-.045em] sm:text-5xl lg:text-6xl">Tre fagområder som møtes i samme løsning.</h2></div><p className="mb-0 max-w-md text-sm leading-7 text-kodela-muted lg:justify-self-end">Vi jobber tett sammen gjennom hele prosjektet. Du jobber med menneskene som faktisk bygger løsningen.</p></div><div className="border-t border-white/15">{teamMembers.map((member,index)=><article key={member.name} className="group grid gap-5 border-b border-white/15 py-8 sm:grid-cols-[60px_.65fr_1fr] sm:items-start sm:gap-8 lg:py-10"><span className="text-[10px] tracking-[.2em] text-kodela-gold">0{index+1}</span><div><h3 className="mb-2 text-3xl font-light tracking-[-.04em] sm:text-4xl">{member.name}</h3><p className="mb-0 text-[9px] uppercase tracking-[.16em] text-[#e2bd79]">{member.role}</p></div><p className="mb-0 max-w-xl text-sm leading-7 text-kodela-muted transition-colors duration-300 group-hover:text-zinc-300">{member.text}</p></article>)}</div></div></section>
+      <section className="border-y border-white/10 bg-[#101010] px-6 py-20 sm:py-24 lg:py-28">
+        <div className="mx-auto max-w-7xl">
+          <div className="mb-14 grid gap-8 lg:grid-cols-[1fr_.55fr] lg:items-end lg:gap-20 sm:mb-16"><div><p className="mb-5 text-[10px] uppercase tracking-[.3em] text-kodela-gold">Menneskene bak</p><h2 className="max-w-4xl text-4xl font-light leading-[1.04] tracking-[-.045em] sm:text-5xl lg:text-6xl">Tre faglige perspektiver.<br/>Samme bord.</h2></div><p className="mb-0 max-w-sm text-sm leading-7 text-kodela-muted lg:justify-self-end">Alle tre er involvert i hvordan Kodela tenker, bygger og leverer.</p></div>
+          <div className="border-t border-white/15">
+            {teamMembers.map((member, index) => (
+              <article key={member.name} className="group grid gap-5 border-b border-white/15 py-8 transition-colors duration-300 hover:bg-white/[.018] sm:grid-cols-[50px_.62fr_1fr] sm:items-start sm:gap-8 sm:px-2 lg:py-11">
+                <span className="pt-2 text-[9px] tracking-[.22em] text-kodela-gold">0{index + 1}</span>
+                <div><h3 className="mb-3 text-3xl font-light tracking-[-.045em] sm:text-4xl">{member.name}</h3><p className="mb-0 text-[9px] uppercase tracking-[.17em] text-[#e2bd79]">{member.role}</p></div>
+                <p className="mb-0 max-w-xl text-sm leading-7 text-kodela-muted sm:pt-2">{member.text}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
 
-    <section className="px-6 py-20 sm:py-24 lg:py-28"><div className="mx-auto max-w-7xl"><div className="grid gap-12 lg:grid-cols-[.7fr_1fr] lg:gap-24"><div><p className="mb-5 text-[10px] uppercase tracking-[.3em] text-kodela-gold">Måten vi jobber på</p><h2 className="text-4xl font-light leading-[1.05] tracking-[-.045em] sm:text-5xl">Lite team. Tett samarbeid.</h2></div><div className="border-t border-white/15">{[["Direkte kontakt","Du snakker med menneskene som faktisk designer og utvikler løsningen."],["Riktig omfang","Vi starter med behovet og finner ut hva som faktisk trengs, i stedet for å fylle prosjektet med funksjoner uten en tydelig hensikt."],["Én helhet","Utseende, brukeropplevelse og utvikling må fungere sammen. Derfor ser vi på hele løsningen, ikke bare hver vår del."]].map(([title,text])=><div key={title} className="grid gap-4 border-b border-white/15 py-7 sm:grid-cols-[150px_1fr]"><h3 className="mb-0 text-base font-normal text-zinc-100">{title}</h3><p className="mb-0 text-sm leading-7 text-kodela-muted">{text}</p></div>)}</div></div></div></section>
+      <section className="px-6 py-20 sm:py-24 lg:py-28">
+        <div className="mx-auto max-w-7xl">
+          <div className="grid gap-12 lg:grid-cols-[.68fr_1fr] lg:gap-24">
+            <div><p className="mb-5 text-[10px] uppercase tracking-[.3em] text-kodela-gold">Slik jobber vi</p><h2 className="max-w-lg text-4xl font-light leading-[1.05] tracking-[-.045em] sm:text-5xl">Tett nok til å forstå. Strukturert nok til å levere.</h2></div>
+            <div className="border-t border-white/15">
+              {principles.map(([title, text], index) => <div key={title} className="grid gap-4 border-b border-white/15 py-7 sm:grid-cols-[42px_155px_1fr] sm:gap-5"><span className="text-[9px] tracking-[.18em] text-kodela-gold">0{index + 1}</span><h3 className="mb-0 text-base font-normal text-zinc-100">{title}</h3><p className="mb-0 max-w-lg text-sm leading-7 text-kodela-muted">{text}</p></div>)}
+            </div>
+          </div>
+        </div>
+      </section>
 
-    <section className="relative overflow-hidden border-y border-white/10 bg-[#101010] px-6 py-20 sm:py-28 lg:py-32"><div className="absolute right-[8%] top-1/2 hidden h-56 w-56 -translate-y-1/2 rounded-full border border-[#c9a66b]/20 lg:block motion-safe:animate-[spin_24s_linear_infinite]"/><div className="absolute right-[12%] top-1/2 hidden h-36 w-36 -translate-y-1/2 rounded-full border border-white/10 lg:block motion-safe:animate-[spin_16s_linear_infinite_reverse]"/><div className="relative mx-auto max-w-7xl"><p className="mb-7 text-[10px] uppercase tracking-[.32em] text-kodela-gold">Vår tilnærming</p><p className="max-w-5xl text-[clamp(2.8rem,6vw,5.8rem)] font-light leading-[.98] tracking-[-.055em]">Vi bygger ikke mer enn nødvendig.<br/><span className="text-kodela-gold">Vi bygger det som betyr noe.</span></p></div></section>
+      <section className="relative overflow-hidden border-y border-white/10 bg-[#0a0a0a] px-6 py-20 sm:py-28 lg:py-36">
+        <div aria-hidden="true" className="absolute left-0 top-1/2 h-px w-full -translate-y-1/2 bg-gradient-to-r from-transparent via-[#c9a66b]/15 to-transparent" />
+        <div className="relative mx-auto max-w-7xl"><p className="mb-7 text-[10px] uppercase tracking-[.32em] text-kodela-gold">Vår tilnærming</p><p className="max-w-6xl text-[clamp(2.8rem,6.2vw,6rem)] font-light leading-[.98] tracking-[-.055em]">Vi bygger ikke mer<br className="hidden sm:block"/> enn nødvendig. <span className="text-kodela-gold">Vi bygger det som betyr noe.</span></p></div>
+      </section>
 
-    <section className="px-6 py-20 sm:py-24 lg:py-28"><div className="mx-auto grid max-w-7xl gap-10 border-t border-white/15 pt-14 lg:grid-cols-[1fr_auto] lg:items-end"><div className="max-w-4xl"><p className="mb-5 text-[10px] uppercase tracking-[.3em] text-kodela-gold">Har du noe du vil bygge?</p><h2 className="text-4xl font-light leading-[1.04] tracking-[-.045em] sm:text-5xl lg:text-6xl">Fortell oss hvor du vil. Vi finner veien dit sammen.</h2><p className="mt-6 mb-0 max-w-xl text-sm leading-7 text-kodela-muted">Du trenger ikke ha løsningen klar. Fortell oss om bedriften, ideen eller problemet du prøver å løse.</p></div><a href="mailto:post@kodela.studio?subject=Prosjektforespørsel" className="w-fit border border-kodela-gold px-8 py-5 text-[10px] uppercase tracking-[.18em] transition hover:bg-kodela-gold hover:text-kodela-black">Start en samtale <span className="ml-6">→</span></a></div></section>
-  </main>;
+      <section className="px-6 py-20 sm:py-24 lg:py-28">
+        <div className="mx-auto max-w-7xl">
+          <div className="grid gap-10 border-t border-white/15 pt-14 lg:grid-cols-[1fr_auto] lg:items-end lg:pt-16">
+            <div className="max-w-4xl"><p className="mb-5 text-[10px] uppercase tracking-[.3em] text-kodela-gold">Neste steg</p><h2 className="text-4xl font-light leading-[1.04] tracking-[-.045em] sm:text-5xl lg:text-6xl">Har du noe du vil bygge?</h2><p className="mt-6 mb-0 max-w-xl text-sm leading-7 text-kodela-muted">Fortell oss om bedriften, ideen eller problemet du prøver å løse. Du trenger ikke ha resten klart.</p></div>
+            <a href="mailto:post@kodela.studio?subject=Prosjektforespørsel" className="w-fit border border-kodela-gold px-8 py-5 text-[10px] uppercase tracking-[.18em] transition duration-300 hover:bg-kodela-gold hover:text-kodela-black">Start en samtale <span className="ml-6">→</span></a>
+          </div>
+        </div>
+      </section>
+    </main>
+  );
 }
