@@ -1,56 +1,45 @@
 import Logo from "./Logo";
 
 export default function Footer() {
+  const year = new Date().getFullYear();
+
   return (
-    <footer id="contact" className="border-t border-white/10 bg-kodela-black px-6 py-16">
-      <div className="mx-auto grid max-w-7xl gap-12 md:grid-cols-4">
-        <div>
-          <Logo variant="small" />
+    <footer id="contact" className="border-t border-white/10 bg-kodela-black px-6 pb-8 pt-20">
+      <div className="mx-auto max-w-7xl">
+        <div className="grid gap-12 pb-16 md:grid-cols-[1.4fr_0.8fr_0.8fr_1fr]">
+          <div>
+            <Logo variant="small" />
+            <p className="mt-6 max-w-sm text-sm leading-7 text-kodela-muted">Nettsider og digitale løsninger utviklet med tydelighet, godt design og gjennomtenkt funksjon.</p>
+          </div>
 
-          <p className="mt-6 max-w-xs text-sm text-kodela-muted">
-            Digitale løsninger bygget med strategi, design og kode.
-          </p>
+          <div>
+            <h3 className="mb-5 text-xs uppercase tracking-[0.18em] text-kodela-gold">Tjenester</h3>
+            <ul className="space-y-3 text-sm text-kodela-muted">
+              <li><a className="transition hover:text-kodela-cream" href="/packages?tjeneste=nettside">Nettside</a></li>
+              <li><a className="transition hover:text-kodela-cream" href="/packages?tjeneste=booking">Booking</a></li>
+              <li><a className="transition hover:text-kodela-cream" href="/packages?tjeneste=oppfolging">Oppfølging</a></li>
+            </ul>
+          </div>
 
-          <div className="mt-6 flex gap-4 text-kodela-muted">
-            <a href="#" aria-label="LinkedIn">in</a>
-            <a href="#" aria-label="Instagram">ig</a>
-            <a href="#" aria-label="Facebook">fb</a>
+          <div>
+            <h3 className="mb-5 text-xs uppercase tracking-[0.18em] text-kodela-gold">Kodela</h3>
+            <ul className="space-y-3 text-sm text-kodela-muted">
+              <li><a className="transition hover:text-kodela-cream" href="/#about">Om oss</a></li>
+              <li><a className="transition hover:text-kodela-cream" href="/#projects">Prosjekter</a></li>
+              <li><a className="transition hover:text-kodela-cream" href="/#contact">Kontakt</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="mb-5 text-xs uppercase tracking-[0.18em] text-kodela-gold">Kontakt</h3>
+            <a href="mailto:post@kodela.studio" className="text-sm text-kodela-cream transition hover:text-kodela-gold">post@kodela.studio</a>
+            <p className="mt-3 text-sm text-kodela-muted">Oslo, Norge</p>
           </div>
         </div>
 
-        <div>
-          <h3 className="mb-4 text-sm uppercase tracking-widest text-kodela-gold">
-            Tjenester
-          </h3>
-          <ul className="space-y-2 text-sm text-kodela-muted">
-            <li>Webdesign</li>
-            <li>Digitale løsninger</li>
-            <li>Nettsider</li>
-            <li>Logo & Identitet</li>
-          </ul>
-        </div>
-
-        <div>
-          <h3 className="mb-4 text-sm uppercase tracking-widest text-kodela-gold">
-            Byrå
-          </h3>
-          <ul className="space-y-2 text-sm text-kodela-muted">
-            <li>Om oss</li>
-            <li>Prosjekter</li>
-            <li>Karriere</li>
-            <li>Kontakt</li>
-          </ul>
-        </div>
-
-        <div>
-          <h3 className="mb-4 text-sm uppercase tracking-widest text-kodela-gold">
-            Kontakt
-          </h3>
-          <ul className="space-y-2 text-sm text-kodela-muted">
-            <li>post@kodela.studio</li>
-            <li>+47 123 45 678</li>
-            <li>Oslo, Norge</li>
-          </ul>
+        <div className="flex flex-col gap-3 border-t border-white/10 pt-7 text-xs text-kodela-muted sm:flex-row sm:items-center sm:justify-between">
+          <p>© {year} Kodela Studio</p>
+          <p>Design og utvikling av Kodela Studio</p>
         </div>
       </div>
     </footer>
