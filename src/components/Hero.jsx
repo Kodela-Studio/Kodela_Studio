@@ -2,78 +2,43 @@ import ProjectShowcase from "./ProjectShowcase";
 
 export default function Hero() {
   return (
-    <main className="relative min-h-screen overflow-hidden bg-kodela-black pt-28">
-      <div className="absolute left-1/2 top-28 h-[620px] w-[620px] -translate-x-1/2 rounded-full bg-kodela-gold/10 blur-3xl" />
-      <div className="absolute -right-32 top-52 h-96 w-96 rounded-full bg-white/5 blur-3xl" />
+    <main className="relative overflow-hidden bg-kodela-black pt-24 text-kodela-cream sm:pt-28">
+      <div className="pointer-events-none absolute left-1/2 top-24 h-[420px] w-[420px] -translate-x-1/2 rounded-full bg-kodela-gold/[0.08] blur-3xl sm:h-[620px] sm:w-[620px]" />
 
-      <section className="relative flex min-h-[calc(100vh-7rem)] items-center px-6 py-20">
-        <div className="mx-auto grid max-w-7xl items-center gap-16 lg:grid-cols-[1.05fr_0.95fr]">
-          <div>
-            <p className="mb-6 text-sm uppercase tracking-[0.35rem] text-kodela-gold">
-              Webdesign, UX og digitale løsninger
-            </p>
+      <section className="relative px-6 pb-20 pt-14 sm:pb-24 sm:pt-20 lg:flex lg:min-h-[calc(100vh-7rem)] lg:items-center lg:py-20">
+        <div className="mx-auto grid w-full max-w-7xl items-center gap-14 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16 xl:gap-24">
+          <div className="min-w-0">
+            <p className="mb-5 text-[0.68rem] uppercase tracking-[0.24em] text-kodela-gold sm:mb-6 sm:text-sm sm:tracking-[0.3rem]">Nettsider for små bedrifter</p>
 
-            <h1 className="max-w-5xl text-5xl font-light leading-[0.98] md:text-7xl lg:text-8xl">
-              Nettsiden din skal ikke bare se bra ut.
-              <span className="block text-kodela-gold">
-                Den skal bli valgt.
-              </span>
+            <h1 className="max-w-5xl text-[clamp(2.8rem,12vw,4.5rem)] font-light leading-[0.98] tracking-[-0.045em] md:text-7xl lg:text-[clamp(4.2rem,6vw,6rem)]">
+              Et bedre førsteinntrykk.
+              <span className="mt-2 block text-kodela-gold">En enklere vei til kontakt.</span>
             </h1>
 
-            <p className="mt-8 max-w-2xl text-lg leading-8 text-kodela-muted">
-              Vi hjelper små og mellomstore bedrifter med nettsider, visuell
-              identitet og brukeropplevelser som bygger tillit, forklarer
-              verdien deres tydelig og gjør det enklere for kunder å ta kontakt.
+            <p className="mt-7 max-w-2xl text-base leading-7 text-kodela-muted sm:mt-8 sm:text-lg sm:leading-8">
+              Kodela Studio utvikler profesjonelle nettsider med tydelig struktur, gjennomtenkt design og en brukeropplevelse som gjør det enkelt å forstå hvem dere er og hva dere tilbyr.
             </p>
 
-            <div className="mt-12 flex flex-wrap gap-4">
-              <a
-                href="/packages"
-                className="border border-kodela-gold bg-kodela-gold px-8 py-4 text-xs uppercase tracking-widest text-kodela-black transition hover:bg-transparent hover:text-kodela-gold"
-              >
-                Se tjenester
-              </a>
-
-              <a
-                href="mailto:post@kodela.studio"
-                className="border border-white/15 px-8 py-4 text-xs uppercase tracking-widest text-kodela-cream transition hover:border-kodela-gold hover:text-kodela-gold"
-              >
-                Få en vurdering
-              </a>
+            <div className="mt-9 flex flex-col gap-3 sm:mt-11 sm:flex-row sm:flex-wrap sm:gap-4">
+              <a href="/packages" className="border border-kodela-gold bg-kodela-gold px-7 py-4 text-center text-xs uppercase tracking-[0.16em] text-kodela-black transition-colors duration-300 hover:bg-transparent hover:text-kodela-gold sm:px-8">Se tjenester</a>
+              <a href="mailto:post@kodela.studio?subject=Prosjektforespørsel" className="border border-white/15 px-7 py-4 text-center text-xs uppercase tracking-[0.16em] text-kodela-cream transition-colors duration-300 hover:border-kodela-gold hover:text-kodela-gold sm:px-8">Fortell om prosjektet</a>
             </div>
 
-            <div className="mt-16 grid max-w-3xl gap-6 border-t border-white/10 pt-8 sm:grid-cols-3">
-              <div>
-                <p className="text-3xl font-light text-kodela-gold">01</p>
-                <p className="mt-2 text-sm leading-6 text-kodela-muted">
-                  Tydeligere førsteinntrykk
-                </p>
-              </div>
-
-              <div>
-                <p className="text-3xl font-light text-kodela-gold">02</p>
-                <p className="mt-2 text-sm leading-6 text-kodela-muted">
-                  Bedre flyt fra besøk til kontakt
-                </p>
-              </div>
-
-              <div>
-                <p className="text-3xl font-light text-kodela-gold">03</p>
-                <p className="mt-2 text-sm leading-6 text-kodela-muted">
-                  Design som støtter vekst
-                </p>
-              </div>
+            <div className="mt-12 grid gap-0 border-y border-white/10 sm:mt-16 sm:grid-cols-3 sm:border-b-0">
+              {["Tydelig struktur", "Responsivt design", "Personlig oppfølging"].map((item, index) => (
+                <div key={item} className={`flex items-center gap-4 py-5 sm:block sm:py-6 ${index > 0 ? "border-t border-white/10 sm:border-l sm:border-t-0 sm:pl-6" : ""}`}>
+                  <p className="text-xs tracking-[0.16em] text-kodela-gold">0{index + 1}</p>
+                  <p className="mt-0 text-sm leading-6 text-kodela-muted sm:mt-3">{item}</p>
+                </div>
+              ))}
             </div>
           </div>
 
-          <div className="relative">
+          <div className="relative mx-auto w-full max-w-2xl lg:max-w-none">
             <ProjectShowcase />
-
-            <div className="absolute -bottom-6 left-6 hidden border border-kodela-gold bg-kodela-black px-6 py-5 text-sm text-kodela-muted shadow-2xl md:block">
-              <span className="mb-2 block text-xs uppercase tracking-[0.25rem] text-kodela-gold">
-                Kodela Studio
-              </span>
-              Strategi, design og utvikling samlet i én digital løsning.
+            <div className="absolute -bottom-5 left-5 right-5 hidden border border-kodela-gold/60 bg-kodela-black/95 px-6 py-5 text-sm leading-6 text-kodela-muted backdrop-blur md:block lg:right-auto lg:max-w-sm">
+              <span className="mb-2 block text-[0.65rem] uppercase tracking-[0.22em] text-kodela-gold">Kodela Studio</span>
+              Design og utvikling samlet i én gjennomført digital løsning.
             </div>
           </div>
         </div>
