@@ -1,36 +1,24 @@
-const process = [
-  { number: "01", title: "Avklaring", text: "Vi starter med bedriften, målgruppen og hva nettsiden faktisk skal hjelpe dere med å oppnå." },
-  { number: "02", title: "Struktur og design", text: "Vi organiserer innholdet, bygger et tydelig visuelt hierarki og tilpasser uttrykket til bedriften." },
-  { number: "03", title: "Utvikling og lansering", text: "Løsningen bygges responsivt, testes på ulike skjermstørrelser og gjøres klar for publisering." },
-];
-
 export default function Projects() {
   return (
-    <section id="projects" className="bg-kodela-dark px-6 py-20 text-kodela-cream sm:py-24 lg:py-28">
-      <div className="mx-auto max-w-7xl">
-        <div className="grid gap-10 lg:grid-cols-[1fr_0.72fr] lg:items-end">
-          <div>
-            <p className="mb-4 text-xs uppercase tracking-[0.28em] text-kodela-gold sm:text-sm sm:tracking-[0.3rem]">Slik jobber vi</p>
-            <h2 className="max-w-4xl text-4xl font-light leading-[1.08] tracking-[-0.035em] sm:text-5xl md:text-6xl">En ryddig prosess fra idé til ferdig nettside.</h2>
+    <section id="projects" className="overflow-hidden bg-[#0d0d0d] text-kodela-cream">
+      <div className="grid lg:min-h-[650px] lg:grid-cols-2">
+        <div className="relative min-h-[420px] overflow-hidden border-y border-white/10 lg:min-h-full lg:border-r lg:border-t-0">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_25%_38%,rgba(201,166,107,.18),transparent_22%),linear-gradient(145deg,#27231c,#111_52%,#080808)]" />
+          <div className="absolute bottom-[13%] left-[12%] h-[45%] w-[72%] border border-white/10 bg-[#171614] shadow-[0_35px_90px_rgba(0,0,0,.5)]" />
+          <div className="absolute bottom-[20%] left-[20%] h-[28%] w-[42%] border-l border-kodela-gold/35 bg-black/15" />
+          <div className="absolute left-[15%] top-[14%] h-40 w-40 rounded-full bg-kodela-gold/10 blur-3xl" />
+          <p className="absolute bottom-8 left-8 max-w-xs text-xs uppercase tracking-[.22em] text-kodela-gold sm:bottom-10 sm:left-10">Strategi · design · utvikling</p>
+        </div>
+
+        <div className="flex items-center px-6 py-20 sm:px-12 sm:py-24 lg:px-16 xl:px-24">
+          <div className="max-w-2xl">
+            <p className="mb-5 text-xs uppercase tracking-[.32em] text-kodela-gold">Mer enn bare en nettside</p>
+            <h2 className="text-4xl font-light leading-[1.05] tracking-[-.04em] sm:text-6xl">Design som gjør bedriften lettere å velge.</h2>
+            <p className="mt-7 max-w-xl text-base leading-8 text-kodela-muted">Det visuelle uttrykket skal vekke interesse. Strukturen skal gjøre resten. Vi kombinerer begge deler for å skape en nettside som føles riktig for merkevaren og enkel for kunden.</p>
+            <div className="mt-10 grid gap-7 border-t border-white/10 pt-8 sm:grid-cols-3">
+              {[['Strategi','Vi finner det viktigste budskapet.'],['Design','Vi gir det et tydelig visuelt uttrykk.'],['Utvikling','Vi gjør løsningen rask og responsiv.']].map(([title,text])=><div key={title}><h3 className="text-base font-normal">{title}</h3><p className="mt-2 text-xs leading-6 text-kodela-muted">{text}</p></div>)}
+            </div>
           </div>
-          <p className="max-w-xl text-base leading-8 text-kodela-muted lg:justify-self-end">Et godt resultat handler ikke om flest mulig funksjoner. Vi avklarer hva bedriften trenger, prioriterer det viktigste og bygger en løsning som er enkel å forstå, bruke og videreføre.</p>
-        </div>
-
-        <div className="mt-14 grid border-y border-white/10 sm:mt-16 md:grid-cols-3">
-          {process.map((item, index) => (
-            <article key={item.number} className={`flex min-h-[270px] flex-col py-8 sm:py-10 md:min-h-[330px] md:p-10 ${index > 0 ? "border-t border-white/10 md:border-l md:border-t-0" : ""}`}>
-              <span className="text-xs tracking-[0.2em] text-kodela-gold">{item.number}</span>
-              <div className="mt-auto pt-14">
-                <h3 className="text-2xl font-light tracking-[-0.02em]">{item.title}</h3>
-                <p className="mt-5 max-w-sm text-sm leading-7 text-kodela-muted">{item.text}</p>
-              </div>
-            </article>
-          ))}
-        </div>
-
-        <div className="mt-10 flex flex-col gap-5 border-b border-white/10 pb-10 sm:flex-row sm:items-center sm:justify-between">
-          <p className="max-w-2xl text-sm leading-7 text-kodela-muted">Har dere allerede en nettside? Vi kan også vurdere hva som bør beholdes, forbedres eller bygges på nytt.</p>
-          <a href="mailto:post@kodela.studio?subject=Prosjektforespørsel" className="shrink-0 border border-kodela-gold px-7 py-4 text-center text-xs uppercase tracking-[0.16em] transition-colors duration-300 hover:bg-kodela-gold hover:text-kodela-black">Snakk med oss</a>
         </div>
       </div>
     </section>
