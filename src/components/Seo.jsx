@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-const SITE_URL = "https://kodela.studio";
+const SITE_URL = "https://kodelastudio.no";
 
 export default function Seo({ title, description, path = "/", type = "website", schema = [] }) {
   useEffect(() => {
