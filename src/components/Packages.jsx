@@ -58,21 +58,13 @@ export default function Packages() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/45 to-black/10 transition duration-500 group-hover:via-black/50" />
                   <div className="relative flex h-full min-h-[470px] flex-col p-7 sm:p-8 lg:min-h-0">
                     <p className="w-fit border border-[#f0cf8a]/50 bg-black/75 px-3 py-2 text-[10px] font-bold uppercase tracking-[.2em] text-[#f0cf8a] shadow-[0_4px_18px_rgba(0,0,0,.3)] backdrop-blur-md">{item.category}</p>
-
                     <div className="mt-auto pt-10">
                       <h3 className={`${index === 0 ? "text-4xl sm:text-5xl" : "text-3xl sm:text-[2.2rem]"} font-light leading-none tracking-[-.04em]`}>{item.name}</h3>
                       <p className={`mt-4 mb-0 text-sm leading-7 text-zinc-100 ${index === 0 ? "max-w-xl" : "max-w-[440px]"}`}>{item.intro}</p>
-
                       <div className="mt-6 border-t border-white/25 pt-5">
                         <div className="flex items-end justify-between gap-6">
-                          <div>
-                            <p className="mb-1 text-lg font-semibold text-[#f0cf8a] drop-shadow-[0_2px_10px_rgba(0,0,0,.95)]">{item.price}</p>
-                            <p className="mb-0 text-[10px] leading-5 text-zinc-300">{item.priceNote}</p>
-                          </div>
-                          <span className="flex shrink-0 items-center gap-3 text-[10px] font-semibold uppercase tracking-[.14em] text-white">
-                            <span className="hidden opacity-0 transition duration-300 group-hover:opacity-100 group-focus-visible:opacity-100 xl:inline">Se tjenesten</span>
-                            <span className="text-xl text-[#f0cf8a] transition-transform duration-300 group-hover:translate-x-1 group-focus-visible:translate-x-1">→</span>
-                          </span>
+                          <div><p className="mb-1 text-lg font-semibold text-[#f0cf8a] drop-shadow-[0_2px_10px_rgba(0,0,0,.95)]">{item.price}</p><p className="mb-0 text-[10px] leading-5 text-zinc-300">{item.priceNote}</p></div>
+                          <span className="flex shrink-0 items-center gap-3 text-[10px] font-semibold uppercase tracking-[.14em] text-white"><span className="hidden opacity-0 transition duration-300 group-hover:opacity-100 group-focus-visible:opacity-100 xl:inline">Se tjenesten</span><span className="text-xl text-[#f0cf8a] transition-transform duration-300 group-hover:translate-x-1 group-focus-visible:translate-x-1">→</span></span>
                         </div>
                         <p className="mt-4 mb-0 max-w-xl text-[11px] leading-5 text-zinc-200 sm:text-xs">{item.shortIncludes.join(" · ")}</p>
                       </div>
@@ -85,16 +77,16 @@ export default function Packages() {
 
           <p className="mt-6 max-w-3xl text-[11px] leading-6 text-zinc-600">Alle priser er eks. mva. Domene, hosting og eventuelle abonnementer kommer i tillegg. Endelig pris avtales før prosjektet starter.</p>
 
-          <div className="mt-16 grid gap-7 border-y border-white/15 py-10 sm:mt-20 sm:py-12 lg:grid-cols-[.8fr_1fr] lg:items-center lg:gap-20">
+          <div className="mt-14 grid gap-7 border-y border-white/15 py-9 sm:mt-16 sm:py-10 lg:grid-cols-[.8fr_1fr] lg:items-center lg:gap-20">
             <div><p className="mb-4 text-[10px] uppercase tracking-[.28em] text-kodela-gold">Usikker på hvor du skal starte?</p><h3 className="mb-0 text-3xl font-light leading-tight tracking-[-.035em] sm:text-4xl">Start med behovet, ikke teknologien.</h3></div>
             <div className="max-w-xl lg:justify-self-end"><p className="mb-5 text-sm leading-7 text-kodela-muted">For de fleste bedrifter er nettsiden utgangspunktet. Booking kan legges til når kundene skal kunne bestille tid, og Oppfølging passer når du ønsker hjelp etter lansering.</p><a href={serviceEmailHref("prosjekt")} className="inline-block border-b border-kodela-gold/70 pb-2 text-[10px] uppercase tracking-[.16em]">Fortell oss om bedriften din <span className="ml-4 text-kodela-gold">→</span></a></div>
           </div>
         </div>
       </section>
 
-      <section className="border-b border-white/10 bg-[#101010] px-6 py-20 sm:py-24 lg:py-32">
-        <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[.85fr_1.15fr] lg:items-center lg:gap-24">
-          <div className="max-w-xl">
+      <section className="border-b border-white/10 bg-[#101010] px-6 pb-20 pt-12 sm:pb-24 sm:pt-14 lg:pb-28 lg:pt-16">
+        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[.85fr_1.15fr] lg:items-start lg:gap-20">
+          <div className="max-w-xl lg:pt-12">
             <p className="mb-5 text-[10px] uppercase tracking-[.3em] text-kodela-gold">Fra idé til ferdig løsning</p>
             <h2 className="text-4xl font-light leading-[1.05] tracking-[-.045em] sm:text-5xl">Ryddig å starte. Enkelt å bygge videre.</h2>
             <p className="mt-6 text-base leading-8 text-kodela-muted">Vi avklarer hva du trenger først, bygger løsningen rundt bedriften og gjør det tydelig hva som er inkludert. Når behovene endrer seg, kan løsningen utvikles videre.</p>
@@ -104,7 +96,7 @@ export default function Packages() {
               <div className="grid grid-cols-[92px_1fr] gap-5 border-b border-white/15 py-5 sm:grid-cols-[110px_1fr]"><span className="text-[10px] uppercase tracking-[.18em] text-kodela-gold">Etterpå</span><p className="mb-0 text-sm text-zinc-300">Vi kan fortsatt hjelpe når noe skal endres.</p></div>
             </div>
           </div>
-          <figure className="relative aspect-[4/5] max-h-[700px] overflow-hidden bg-[#151515] lg:justify-self-end"><img src={serviceThree} alt="Digital designprosess" className="h-full w-full object-cover object-center" /><div className="absolute inset-0 ring-1 ring-inset ring-white/10" /></figure>
+          <figure className="relative aspect-[4/5] max-h-[650px] overflow-hidden bg-[#151515] lg:justify-self-end"><img src={serviceThree} alt="Digital designprosess" className="h-full w-full object-cover object-center" /><div className="absolute inset-0 ring-1 ring-inset ring-white/10" /></figure>
         </div>
       </section>
 
