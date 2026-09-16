@@ -1,4 +1,4 @@
-import serviceCatalog from "./serviceCatalog";
+import { serviceCatalog } from "./serviceCatalog";
 
 export const kodelaKnowledge = {
   packages: serviceCatalog.map((service) => ({
