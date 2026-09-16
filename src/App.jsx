@@ -5,18 +5,24 @@ import About from "./components/About";
 import Footer from "./components/Footer";
 import Packages from "./components/Packages";
 import Contact from "./components/Contact";
+import Privacy from "./components/Privacy";
 import Chatbot from "./components/Chatbot";
+import Seo from "./components/Seo";
 
 function App() {
-  const pathname = window.location.pathname.toLowerCase().replace(/\/$/, "");
-  const isPackagesPage = pathname === "/packages";
+  const pathname = window.location.pathname.toLowerCase().replace(/\/$/, "") || "/";
+  const isServicesPage = pathname === "/tjenester" || pathname.startsWith("/tjenester/") || pathname === "/packages";
   const isAboutPage = pathname === "/om-oss";
   const isContactPage = pathname === "/kontakt";
+  const isPrivacyPage = pathname === "/personvern";
 
   return (
     <div className="min-h-screen bg-kodela-black text-kodela-cream">
+      <a href="#main-content" className="sr-only z-[1000] bg-kodela-gold p-3 text-kodela-black focus:not-sr-only focus:fixed focus:left-3 focus:top-3">Hopp til hovedinnhold</a>
       <Header />
-      {isPackagesPage ? <Packages /> : isAboutPage ? <About page /> : isContactPage ? <Contact /> : <><Hero /><Services /><About /></>}
+      <div id="main-content">
+        {isServicesPage ? <Packages /> : isAboutPage ? <><Seo title="Om Kodela Studio | Webdesign og utvikling" description="Møt teamet bak Kodela Studio. Tre utviklere med styrker innen webdesign, UX, utvikling og sikkerhet." path="/om-oss"/><About page /></> : isContactPage ? <Contact /> : isPrivacyPage ? <Privacy /> : <><Seo title="Kodela Studio | Nettsider for små bedrifter" description="Kodela Studio designer og utvikler profesjonelle, raske og mobilvennlige nettsider for små bedrifter. Nettside fra 14 900 kr eks. mva." path="/"/><Hero /><Services /><About /></>}
+      </div>
       <Footer />
       <Chatbot />
     </div>
