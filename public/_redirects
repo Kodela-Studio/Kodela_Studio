@@ -1,1 +1,13 @@
-/* /index.html 200
+/packages /tjenester 301!
+/nettsider /tjenester/nettside 301!
+
+/ /index.html 200
+/tjenester /index.html 200
+/tjenester/nettside /index.html 200
+/tjenester/booking /index.html 200
+/tjenester/oppfolging /index.html 200
+/om-oss /index.html 200
+/kontakt /index.html 200
+/personvern /index.html 200
+
+/* /404.html 404
