@@ -1,6 +1,8 @@
+import { useState } from "react";
 import Logo from "./Logo";
 
 export default function Header() {
+  const [open, setOpen] = useState(false);
   const navLinks = [
     { label: "Hjem", href: "/" },
     { label: "Tjenester", href: "/packages" },
@@ -10,31 +12,45 @@ export default function Header() {
   ];
 
   return (
-    <header className="fixed left-0 top-0 z-50 w-full border-b border-white/10 bg-kodela-black/90 backdrop-blur-xl">
+    <header className="fixed left-0 top-0 z-50 w-full border-b border-white/10 bg-kodela-black/95 backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
-        <a href="/" aria-label="Kodela Studio hjem">
+        <a href="/" aria-label="Kodela Studio hjem" onClick={() => setOpen(false)}>
           <Logo variant="small" />
         </a>
 
-        <nav className="hidden items-center gap-10 text-sm md:flex">
+        <nav className="hidden items-center gap-10 text-sm md:flex" aria-label="Hovedmeny">
           {navLinks.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              className="text-kodela-cream/85 transition hover:text-kodela-gold"
-            >
+            <a key={link.label} href={link.href} className="text-kodela-cream/80 transition-colors duration-300 hover:text-kodela-gold">
               {link.label}
             </a>
           ))}
         </nav>
 
-        <a
-          href="mailto:post@kodela.studio"
-          className="hidden border border-kodela-gold px-6 py-3 text-xs uppercase tracking-widest text-kodela-cream transition hover:bg-kodela-gold hover:text-kodela-black md:block"
-        >
-          La oss snakke →
+        <a href="mailto:post@kodela.studio" className="hidden border border-kodela-gold px-6 py-3 text-xs uppercase tracking-[0.16em] text-kodela-cream transition-colors duration-300 hover:bg-kodela-gold hover:text-kodela-black md:block">
+          Ta kontakt
         </a>
+
+        <button type="button" onClick={() => setOpen((value) => !value)} aria-expanded={open} aria-controls="mobile-navigation" aria-label={open ? "Lukk meny" : "Åpne meny"} className="flex h-11 w-11 flex-col items-center justify-center gap-[5px] border border-white/15 md:hidden">
+          <span className={`block h-px w-5 bg-kodela-cream transition ${open ? "translate-y-[6px] rotate-45" : ""}`} />
+          <span className={`block h-px w-5 bg-kodela-cream transition ${open ? "opacity-0" : ""}`} />
+          <span className={`block h-px w-5 bg-kodela-cream transition ${open ? "-translate-y-[6px] -rotate-45" : ""}`} />
+        </button>
       </div>
+
+      {open && (
+        <nav id="mobile-navigation" aria-label="Mobilmeny" className="border-t border-white/10 bg-kodela-black px-6 pb-8 pt-3 md:hidden">
+          <div className="mx-auto flex max-w-7xl flex-col">
+            {navLinks.map((link) => (
+              <a key={link.label} href={link.href} onClick={() => setOpen(false)} className="border-b border-white/10 py-4 text-base text-kodela-cream/90">
+                {link.label}
+              </a>
+            ))}
+            <a href="mailto:post@kodela.studio" className="mt-6 border border-kodela-gold px-6 py-4 text-center text-xs uppercase tracking-[0.16em] text-kodela-cream">
+              Ta kontakt
+            </a>
+          </div>
+        </nav>
+      )}
     </header>
   );
 }
