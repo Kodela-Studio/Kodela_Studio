@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://kodela.studio/sitemap.xml
+Sitemap: https://kodelastudio.no/sitemap.xml
