@@ -15,9 +15,49 @@
   force = true
 
 [[redirects]]
-  from = "/*"
+  from = "/"
   to = "/index.html"
   status = 200
+
+[[redirects]]
+  from = "/tjenester"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/tjenester/nettside"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/tjenester/booking"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/tjenester/oppfolging"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/om-oss"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/kontakt"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/personvern"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404
 
 [[headers]]
   for = "/*"
