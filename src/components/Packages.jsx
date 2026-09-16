@@ -22,56 +22,60 @@ export default function Packages() {
   if (service) return <ServiceDetails service={service} pathname={pathname} />;
 
   return (
-    <main className="ks-pages ks-services-page">
-      <section className="ks-services-hero">
-        <div className="ks-container ks-services-hero-inner">
-          <p className="ks-label">Tjenester</p>
-          <h1>Digitale løsninger som gjør jobben sin.</h1>
-          <div className="ks-services-hero-bottom">
-            <p>Vi lager nettsider for små bedrifter, kobler på booking når kundene skal bestille tid, og kan følge opp løsningen etter lansering.</p>
-            <a href="#tjenester" className="ks-text-link">Utforsk tjenestene <span>↓</span></a>
+    <main className="bg-[#0d0d0d] pt-24 text-kodela-cream">
+      <section className="border-b border-white/10 px-6 py-20 sm:py-24 lg:py-32">
+        <div className="mx-auto max-w-7xl">
+          <p className="mb-5 text-[10px] uppercase tracking-[.32em] text-kodela-gold">Tjenester</p>
+          <div className="grid gap-8 lg:grid-cols-[1.25fr_.65fr] lg:items-end lg:gap-20">
+            <h1 className="max-w-4xl text-[clamp(3.2rem,7vw,6.5rem)] font-light leading-[.95] tracking-[-.055em]">Det vi kan hjelpe bedriften din med.</h1>
+            <div className="pb-2">
+              <p className="max-w-md text-base leading-8 text-kodela-muted">Tydelige digitale løsninger for små bedrifter. Vi starter med behovet, holder omfanget forståelig og bygger noe som faktisk skal brukes.</p>
+              <a href="#tjenester" className="mt-7 inline-block border-b border-kodela-gold/60 pb-2 text-[10px] uppercase tracking-[.18em]">Se tjenestene <span className="ml-4 text-kodela-gold">↓</span></a>
+            </div>
           </div>
         </div>
       </section>
 
-      <section id="tjenester" className="ks-services-showcase">
-        <div className="ks-container">
-          {selectedId && <p role="status" className="ks-notice">Vi fant ikke denne tjenesten. Se tjenestene våre under.</p>}
+      <section id="tjenester" className="px-6 py-20 sm:py-24 lg:py-28">
+        <div className="mx-auto max-w-7xl">
+          {selectedId && <p role="status" className="mb-10 border-l border-kodela-gold bg-white/5 p-5 text-sm text-zinc-300">Vi fant ikke denne tjenesten. Se tjenestene våre under.</p>}
 
-          {serviceCatalog.map((item, index) => (
-            <article className={`ks-service-story ${index % 2 ? "ks-service-story-reverse" : ""}`} key={item.id}>
-              <figure className="ks-service-story-image">
-                <img src={serviceImages[index]} alt="" aria-hidden="true" />
-              </figure>
-
-              <div className="ks-service-story-copy">
-                <p className="ks-label">{item.category}</p>
-                <h2>{item.name}</h2>
-                <p className="ks-service-heading">{item.heading}</p>
-                <p className="ks-service-description">{item.audience}</p>
-
-                <ul className="ks-service-includes">
-                  {item.shortIncludes.map((included) => <li key={included}>{included}</li>)}
-                </ul>
-
-                <div className="ks-service-story-footer">
-                  <div><span className="ks-service-price">{item.price}</span><span className="ks-service-price-note">{item.priceNote}</span></div>
-                  <a className="ks-service-link" href={servicePageHref(item.id, pathname)}>Se hva som er inkludert <span>→</span></a>
+          <div className="space-y-20 sm:space-y-24 lg:space-y-32">
+            {serviceCatalog.map((item, index) => (
+              <article key={item.id} className="grid items-center gap-9 lg:grid-cols-2 lg:gap-20">
+                <div className={index % 2 ? "lg:order-2" : ""}>
+                  <div className="aspect-[4/3] overflow-hidden bg-[#161616]">
+                    <img src={serviceImages[index]} alt="" aria-hidden="true" className="h-full w-full object-cover object-center" />
+                  </div>
                 </div>
-              </div>
-            </article>
-          ))}
 
-          <p className="ks-footnote">Alle priser er eks. mva. Domene, hosting og eventuelle abonnementer kommer i tillegg. Endelig pris avtales før prosjektet starter.</p>
+                <div className={`max-w-xl ${index % 2 ? "lg:order-1 lg:justify-self-end" : ""}`}>
+                  <p className="mb-4 text-[10px] uppercase tracking-[.26em] text-kodela-gold">{item.category}</p>
+                  <h2 className="text-4xl font-light tracking-[-.045em] sm:text-5xl">{item.name}</h2>
+                  <p className="mt-5 text-lg leading-8 text-zinc-200">{item.heading}</p>
+                  <p className="mt-4 text-sm leading-7 text-kodela-muted">{item.audience}</p>
+
+                  <div className="mt-8 border-y border-white/10 py-5">
+                    {item.shortIncludes.map((included) => <p key={included} className="mb-0 py-1.5 text-sm text-zinc-300">{included}</p>)}
+                  </div>
+
+                  <div className="mt-7 flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
+                    <div><p className="mb-1 text-xl text-kodela-gold">{item.price}</p><p className="mb-0 text-[10px] text-zinc-500">{item.priceNote}</p></div>
+                    <a href={servicePageHref(item.id, pathname)} className="w-fit border-b border-white/20 pb-2 text-[10px] uppercase tracking-[.15em] transition hover:border-kodela-gold">Les mer <span className="ml-4 text-kodela-gold">→</span></a>
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+
+          <p className="mt-16 max-w-3xl border-t border-white/10 pt-6 text-xs leading-6 text-zinc-500">Alle priser er eks. mva. Domene, hosting og eventuelle abonnementer kommer i tillegg. Endelig pris avtales før prosjektet starter.</p>
         </div>
       </section>
 
-      <section className="ks-services-note">
-        <div className="ks-container ks-services-note-inner">
-          <p className="ks-label">Ikke sikker på hva du trenger?</p>
-          <h2>Start med behovet. Vi finner resten sammen.</h2>
-          <p>Du trenger ikke velge en ferdig pakke før du tar kontakt. Fortell oss kort om bedriften og hva du ønsker å få til, så foreslår vi en løsning med tydelig omfang og pris.</p>
-          <a className="ks-button ks-button-gold" href={serviceEmailHref("prosjekt")}>Fortell om prosjektet <span>→</span></a>
+      <section className="border-t border-white/10 bg-[#101010] px-6 py-20 sm:py-24 lg:py-28">
+        <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[1fr_auto] lg:items-end">
+          <div className="max-w-3xl"><p className="mb-5 text-[10px] uppercase tracking-[.3em] text-kodela-gold">Har du et prosjekt i tankene?</p><h2 className="text-4xl font-light leading-tight tracking-[-.04em] sm:text-5xl">Fortell oss hva du trenger. Vi finner en god vei videre.</h2></div>
+          <a href={serviceEmailHref("prosjekt")} className="w-fit bg-kodela-gold px-7 py-4 text-[10px] uppercase tracking-[.16em] text-kodela-black transition hover:bg-[#d8b77f]">Ta kontakt <span className="ml-5">→</span></a>
         </div>
       </section>
     </main>
