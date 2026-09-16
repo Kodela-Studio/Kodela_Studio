@@ -54,15 +54,15 @@ export default function Packages() {
               return (
                 <a key={item.id} href={servicePageHref(item.id, pathname)} className={`group relative min-h-[430px] overflow-hidden border border-white/10 bg-[#151515] ${layout}`}>
                   <img src={serviceImages[index]} alt="" aria-hidden="true" className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-[1.025]" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/35 to-black/5" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/10" />
                   <div className="relative flex h-full min-h-[430px] flex-col justify-end p-7 sm:p-9 lg:min-h-0">
-                    <p className="mb-auto text-[10px] uppercase tracking-[.24em] text-kodela-gold">{item.category}</p>
+                    <p className="mb-auto w-fit bg-black/55 px-3 py-2 text-[10px] font-semibold uppercase tracking-[.24em] text-[#e7c47f] backdrop-blur-sm">{item.category}</p>
                     <div className={index === 0 ? "max-w-xl" : "max-w-md"}>
                       <h3 className={`${index === 0 ? "text-4xl sm:text-5xl" : "text-3xl sm:text-4xl"} font-light tracking-[-.04em]`}>{item.name}</h3>
                       <p className="mt-4 mb-0 text-sm leading-7 text-zinc-300">{item.intro}</p>
                       <div className="mt-6 flex items-end justify-between gap-5 border-t border-white/20 pt-5">
-                        <div><p className="mb-1 text-base text-kodela-gold">{item.price}</p><p className="mb-0 text-[9px] text-zinc-400">{item.shortIncludes.join(" · ")}</p></div>
-                        <span className="shrink-0 text-xl text-kodela-gold transition-transform duration-300 group-hover:translate-x-1">→</span>
+                        <div><p className="mb-1 text-base font-medium text-[#e7c47f] drop-shadow-[0_1px_8px_rgba(0,0,0,.8)]">{item.price}</p><p className="mb-0 text-[9px] text-zinc-300">{item.shortIncludes.join(" · ")}</p></div>
+                        <span className="shrink-0 text-xl text-[#e7c47f] drop-shadow-[0_1px_8px_rgba(0,0,0,.8)] transition-transform duration-300 group-hover:translate-x-1">→</span>
                       </div>
                     </div>
                   </div>
