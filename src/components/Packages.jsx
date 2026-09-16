@@ -54,15 +54,15 @@ export default function Packages() {
               return (
                 <a key={item.id} href={servicePageHref(item.id, pathname)} className={`group relative min-h-[430px] overflow-hidden border border-white/10 bg-[#151515] ${layout}`}>
                   <img src={serviceImages[index]} alt="" aria-hidden="true" className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-[1.025]" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/10" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/45 to-black/15" />
                   <div className="relative flex h-full min-h-[430px] flex-col justify-end p-7 sm:p-9 lg:min-h-0">
-                    <p className="mb-auto w-fit bg-black/55 px-3 py-2 text-[10px] font-semibold uppercase tracking-[.24em] text-[#e7c47f] backdrop-blur-sm">{item.category}</p>
+                    <p className="mb-auto w-fit border border-[#f0cf8a]/55 bg-black/75 px-3.5 py-2.5 text-[11px] font-bold uppercase tracking-[.22em] text-[#f0cf8a] shadow-[0_4px_18px_rgba(0,0,0,.35)] backdrop-blur-md">{item.category}</p>
                     <div className={index === 0 ? "max-w-xl" : "max-w-md"}>
                       <h3 className={`${index === 0 ? "text-4xl sm:text-5xl" : "text-3xl sm:text-4xl"} font-light tracking-[-.04em]`}>{item.name}</h3>
-                      <p className="mt-4 mb-0 text-sm leading-7 text-zinc-300">{item.intro}</p>
-                      <div className="mt-6 flex items-end justify-between gap-5 border-t border-white/20 pt-5">
-                        <div><p className="mb-1 text-base font-medium text-[#e7c47f] drop-shadow-[0_1px_8px_rgba(0,0,0,.8)]">{item.price}</p><p className="mb-0 text-[9px] text-zinc-300">{item.shortIncludes.join(" · ")}</p></div>
-                        <span className="shrink-0 text-xl text-[#e7c47f] drop-shadow-[0_1px_8px_rgba(0,0,0,.8)] transition-transform duration-300 group-hover:translate-x-1">→</span>
+                      <p className="mt-4 mb-0 text-sm leading-7 text-zinc-200">{item.intro}</p>
+                      <div className="mt-6 flex items-end justify-between gap-5 border-t border-white/25 pt-5">
+                        <div><p className="mb-1 text-lg font-semibold text-[#f0cf8a] drop-shadow-[0_2px_10px_rgba(0,0,0,.95)]">{item.price}</p><p className="mb-0 text-[9px] text-zinc-200">{item.shortIncludes.join(" · ")}</p></div>
+                        <span className="shrink-0 text-2xl font-medium text-[#f0cf8a] drop-shadow-[0_2px_10px_rgba(0,0,0,.95)] transition-transform duration-300 group-hover:translate-x-1">→</span>
                       </div>
                     </div>
                   </div>
