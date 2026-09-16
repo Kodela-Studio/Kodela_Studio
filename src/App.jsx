@@ -9,11 +9,12 @@ import Chatbot from "./components/Chatbot";
 function App() {
   const pathname = window.location.pathname.toLowerCase().replace(/\/$/, "");
   const isPackagesPage = pathname === "/packages";
+  const isAboutPage = pathname === "/om-oss";
 
   return (
     <div className="min-h-screen bg-kodela-black text-kodela-cream">
       <Header />
-      {isPackagesPage ? <Packages /> : <><Hero /><Services /><About /></>}
+      {isPackagesPage ? <Packages /> : isAboutPage ? <About page /> : <><Hero /><Services /><About /></>}
       <Footer />
       <Chatbot />
     </div>
