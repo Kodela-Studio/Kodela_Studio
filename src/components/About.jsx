@@ -3,9 +3,27 @@ import HelenaProfile from "../assets/Helena-profile.jpg";
 import JaninaProfile from "../assets/Janina-profile.jpg";
 
 const teamMembers = [
-  { name: "Anna", role: "Utvikling & grafisk design", image: AnnaProfile, focus: "Visuelt uttrykk og utvikling" },
-  { name: "Helena", role: "Utvikling & UX-design", image: HelenaProfile, focus: "Struktur, brukeropplevelse og utvikling" },
-  { name: "Janina", role: "Utvikling & sikkerhet", image: JaninaProfile, focus: "Teknisk kvalitet, sikkerhet og utvikling" },
+  {
+    name: "Anna",
+    role: "Utvikler & grafisk designer",
+    image: AnnaProfile,
+    focus: "Visuelt uttrykk og utvikling",
+    bio: "Anna jobber med utvikling og grafisk design, og har et godt øye for farger, form og de små detaljene som skaper helhet. Hun liker å utforske ideer og finne visuelle uttrykk som gir bedriften personlighet og gjør den lett å kjenne igjen. For henne handler godt design om mer enn at noe ser fint ut – det skal fortelle hvem du er.",
+  },
+  {
+    name: "Helena",
+    role: "Utvikler & designer",
+    image: HelenaProfile,
+    focus: "Struktur, brukeropplevelse og utvikling",
+    bio: "Helena er utvikler og designer med et skarpt blikk for detaljer og en forkjærlighet for nettsider med særpreg. Hun lytter til det bedriften trenger, bidrar med tydelige råd og jobber målrettet for at både designet og funksjonene skal sitte.",
+  },
+  {
+    name: "Janina",
+    role: "Utvikling, sikkerhet & UX",
+    image: JaninaProfile,
+    focus: "Teknisk kvalitet, sikkerhet og utvikling",
+    bio: "Janina jobber med utvikling, sikkerhet og UX, og trives best når hun får kombinere teknisk problemløsning med forståelse for mennesker. Hun liker å grave litt dypere, stille de riktige spørsmålene og finne ut hva som faktisk gjør en løsning god. For henne skal teknologi ikke bare fungere – den skal føles enkel, trygg og naturlig å bruke.",
+  },
 ];
 
 export default function About({ page = false }) {
@@ -51,11 +69,32 @@ export default function About({ page = false }) {
         </div>
       </section>
 
-      <section id="teamet" className="border-y border-white/10 bg-[#101010] px-6 py-16 sm:py-20">
+      <section id="teamet" className="border-y border-white/10 bg-[#101010] px-6 py-20 sm:py-24 lg:py-28">
         <div className="mx-auto max-w-7xl">
-          <div className="mb-10 flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between"><div><p className="mb-4 text-[10px] uppercase tracking-[.3em] text-kodela-gold">Teamet</p><h2 className="mb-0 text-3xl font-light tracking-[-.04em] sm:text-5xl">Tre blikk på samme løsning.</h2></div><p className="mb-0 max-w-md text-sm leading-7 text-kodela-muted">Ulike faglige styrker gjør at vi kan se prosjektet fra flere sider før noe bygges.</p></div>
-          <div className="grid gap-4 md:grid-cols-3">
-            {teamMembers.map((member)=><article key={member.name} className="group overflow-hidden border border-white/10 bg-[#0d0d0d]"><div className="relative aspect-[5/4] overflow-hidden"><img src={member.image} alt={`${member.name} i Kodela Studio`} className="h-full w-full object-cover object-center transition duration-500 group-hover:scale-[1.02]"/><div className="absolute inset-0 bg-gradient-to-t from-black/35 to-transparent"/></div><div className="p-6"><h3 className="mb-2 text-2xl font-light tracking-[-.035em]">{member.name}</h3><p className="mb-5 text-[9px] uppercase tracking-[.15em] text-[#e2bd79]">{member.role}</p><p className="mb-0 text-sm leading-7 text-kodela-muted">{member.focus}</p></div></article>)}
+          <div className="mb-12 grid gap-6 border-b border-white/10 pb-10 lg:grid-cols-[1fr_.55fr] lg:items-end">
+            <div>
+              <p className="mb-4 text-[10px] uppercase tracking-[.3em] text-kodela-gold">Teamet</p>
+              <h2 className="mb-0 max-w-3xl text-3xl font-light tracking-[-.04em] sm:text-5xl">Tre blikk på samme løsning.</h2>
+            </div>
+            <p className="mb-0 max-w-md text-sm leading-7 text-kodela-muted lg:justify-self-end">Ulike faglige styrker gjør at vi kan se prosjektet fra flere sider før noe bygges. Her er menneskene du faktisk jobber med.</p>
+          </div>
+
+          <div className="grid gap-5 lg:grid-cols-3">
+            {teamMembers.map((member,index)=><article key={member.name} className="group flex h-full flex-col overflow-hidden border border-white/10 bg-[#0d0d0d] transition duration-500 hover:-translate-y-1 hover:border-kodela-gold/30">
+              <div className="relative aspect-[4/5] overflow-hidden bg-[#151515]">
+                <img src={member.image} alt={`${member.name} i Kodela Studio`} className="h-full w-full object-cover object-center grayscale-[12%] transition duration-700 group-hover:scale-[1.025] group-hover:grayscale-0"/>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/5 to-transparent"/>
+                <div className="absolute left-5 top-5 flex h-9 w-9 items-center justify-center border border-white/20 bg-black/30 text-[9px] tracking-[.15em] text-kodela-gold backdrop-blur-sm">0{index+1}</div>
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <h3 className="mb-1 text-3xl font-light tracking-[-.04em]">{member.name}</h3>
+                  <p className="mb-0 text-[9px] uppercase tracking-[.16em] text-[#e8c781]">{member.role}</p>
+                </div>
+              </div>
+              <div className="flex flex-1 flex-col p-6 sm:p-7">
+                <div className="mb-5 h-px w-10 bg-kodela-gold/60"/>
+                <p className="mb-0 text-[15px] leading-7 text-zinc-300">{member.bio}</p>
+              </div>
+            </article>)}
           </div>
         </div>
       </section>
