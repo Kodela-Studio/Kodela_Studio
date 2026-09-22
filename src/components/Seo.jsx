@@ -43,7 +43,7 @@ export default function Seo({ title, description, path = "/", type = "website", 
       "@id": `${SITE_URL}/#organization`,
       name: "Kodela Studio",
       url: SITE_URL,
-      email: "post@kodela.studio",
+      email: "post@kodelastudio.no",
       areaServed: "NO",
       knowsLanguage: "nb-NO",
       description: "Kodela Studio designer og utvikler profesjonelle, mobilvennlige nettsider og digitale løsninger for små bedrifter."

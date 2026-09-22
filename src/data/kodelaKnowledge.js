@@ -8,6 +8,6 @@ export const kodelaKnowledge = {
   })),
   services: serviceCatalog.map((service) => service.name),
   contact: {
-    email: "post@kodela.studio",
+    email: "post@kodelastudio.no",
   },
 };
