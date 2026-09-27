@@ -23,3 +23,12 @@ dist-ssr
 *.sln
 *.sw?
 *.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+# Local account screenshots must never be added to the repository.
+*KontoLogin*
+*Kontodetaljer*
