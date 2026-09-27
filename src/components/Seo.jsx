@@ -2,7 +2,7 @@ import { useEffect } from "react";
 
 const SITE_URL = "https://kodelastudio.no";
 
-export default function Seo({ title, description, path = "/", type = "website", schema = [] }) {
+export default function Seo({ title, description, path = "/", type = "website", schema = [], robots = "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" }) {
   useEffect(() => {
     const canonical = `${SITE_URL}${path === "/" ? "" : path}`;
     document.title = title;
@@ -17,7 +17,7 @@ export default function Seo({ title, description, path = "/", type = "website", 
     };
 
     setMeta('meta[name="description"]', { name: "description", content: description });
-    setMeta('meta[name="robots"]', { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" });
+    setMeta('meta[name="robots"]', { name: "robots", content: robots });
     setMeta('meta[property="og:title"]', { property: "og:title", content: title });
     setMeta('meta[property="og:description"]', { property: "og:description", content: description });
     setMeta('meta[property="og:type"]', { property: "og:type", content: type });
@@ -55,7 +55,7 @@ export default function Seo({ title, description, path = "/", type = "website", 
       script.textContent = JSON.stringify(data);
       document.head.appendChild(script);
     });
-  }, [title, description, path, type, schema]);
+  }, [title, description, path, type, schema, robots]);
 
   return null;
 }
